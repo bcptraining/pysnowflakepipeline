@@ -1,0 +1,18 @@
+{
+  "start_time": "2025-07-18 14:46:36",
+  "end_time": "2025-07-18 14:46:46",
+  "duration_sec": 9.96,
+  "files_loaded": 1,
+  "rows_inserted": 0,
+  "rows_rejected": 0,
+  "query_id": null,
+  "rejects": {
+    "count": 0,
+    "columns": [
+      "ROW_STATUS",
+      "ERROR_MESSAGE",
+      "RAW_ROW"
+    ],
+    "sample": []
+  }
+}

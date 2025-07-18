@@ -1,0 +1,10 @@
+# flake8 configuration for snow_pipeline_pkg
+# F401: unused imports
+# F841: unused local variables
+# F811: redefinition of function or variable
+# E501: line too long (>88 chars)
+[flake8]
+max-line-length = 88
+extend-ignore = E203, W503
+exclude = .venv, __pycache__, .pytest_cache, .vscode
+ignore = F401,F841,F811,E501

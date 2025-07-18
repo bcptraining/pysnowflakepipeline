@@ -1,0 +1,25 @@
+{
+    "database_name": "DEMO_DB",
+    "schema_name": "PUBLIC",
+    "target_table": "EMP_DETAILS_AVRO_CLS",
+    "reject_table": "EMPLOYEE_AVRO_REJECTS",
+    "on_error": "CONTINUE",
+    "allow_partial_schema": true,
+    "source_location": "@my_s3_stage/Avro_folder/userdata1.avro",
+    "source_file_type": "avro",
+    "log_file": "logs/pipeline.log",
+    "target_columns": [
+        "REGISTRATION",
+        "USER_ID",
+        "FIRST_NAME",
+        "LAST_NAME",
+        "USER_EMAIL"
+    ],
+    "map_columns": {
+        "REGISTRATION_DTTM": "REGISTRATION",
+        "ID": "USER_ID",
+        "FIRST_NAME": "FIRST_NAME",
+        "LAST_NAME": "LAST_NAME",
+        "EMAIL": "USER_EMAIL"
+    }
+}

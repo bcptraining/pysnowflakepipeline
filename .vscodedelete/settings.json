@@ -1,0 +1,24 @@
+{
+  "python.defaultInterpreterPath": "C:/Users/coryp/miniconda3/envs/snow_pipeline_env/python.exe",
+  "editor.formatOnSave": true,
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.formatting.provider": "black",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/*.pyo": true
+  },
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.analysis.extraPaths": [
+    "./snow_pipeline_pkg",
+    "./ingest",
+    "./transform",
+    "./validate",
+    "./config"
+  ]
+}

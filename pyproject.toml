@@ -1,0 +1,54 @@
+[project]
+name = "snow_pipeline_pkg"
+version = "0.1.0"
+description = "Data pipeline utilities for Snowflake orchestration"
+authors = [
+    { name = "Cory", email = "bcpurkistraining@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "snowflake-snowpark-python",
+    "cryptography",
+    "pandas",
+    "pytest"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+    "pytest",
+    "coverage"
+]
+
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+skip-string-normalization = false
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | __pycache__
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--disable-warnings"
+
+[tool.setuptools]
+packages = ["snow_pipeline_pkg"]
+
+[tool.coverage.run]
+branch = true
+source = ["snow_pipeline_pkg"]
+
+[tool.ruff]
+line-length = 88
+extend-ignore = ["F401", "E501"]
