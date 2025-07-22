@@ -1,6 +1,7 @@
 from snowflake.snowpark import DataFrame
 from typing import List, Tuple
 import logging
+from config.schemas import schema_registry
 
 
 # def validate_column_overlap(df: DataFrame, expected_columns: List[str]) -> bool:
@@ -48,6 +49,36 @@ def validate_schema_matches_table(
     if extras:
         log.warning(f"⚠️ Unused columns from source: {extras}")
     if not missing and not extras:
-        log.info("✅ All schema columns matched.")
+        log.info("✅ All df columns match config target columns.")
 
     return missing, extras
+
+
+def validate_config_against_schema_ref(
+    target_columns: List[str],
+    schema_ref: str,
+    log: logging.Logger,
+) -> Tuple[List[str], List[str]]:
+    schema_key, _, schema_version = schema_ref.partition("@")
+    schema = schema_registry.get(schema_key, {}).get(schema_version)
+
+    if not schema:
+        log.warning(f"⚠️ No schema found for reference: {schema_ref}")
+        return [], []
+
+    expected_columns = [field.name.upper() for field in schema.fields]
+    target_cols = [col.upper() for col in target_columns]
+
+    missing = sorted(set(expected_columns) - set(target_cols))
+    extra = sorted(set(target_cols) - set(expected_columns))
+
+    if missing:
+        log.warning(f"⚠️ Columns missing from config: {missing}")
+    if extra:
+        log.warning(f"⚠️ Extra columns in config not found in schema: {extra}")
+    if not missing and not extra:
+        log.info(
+            f"✅ Config target columns match schema reference '{schema_ref}' exactly."
+        )
+
+    return missing, extra

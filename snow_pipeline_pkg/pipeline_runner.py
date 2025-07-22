@@ -7,7 +7,10 @@ from snow_pipeline_pkg.transform.schema_mapper import (
     apply_column_mapping,
     drop_unmapped_columns,
 )
-from snow_pipeline_pkg.validate.quality_checks import validate_schema_matches_table
+from snow_pipeline_pkg.validate.quality_checks import (
+    validate_schema_matches_table,
+    validate_config_against_schema_ref,
+)
 
 # from snow_pipeline_pkg.config.schemas import emp_details_avro_cls # -- flagged as not used
 from snow_pipeline_pkg.utils.log_setup import setup_logger
@@ -34,7 +37,8 @@ import os
 import time
 import json
 
-# from snowflake.snowpark.functions import col
+# Import schema registry for optional copy_config vs schema validation
+from config.schemas import schema_registry
 
 # ---------- Utility Functions ----------
 
@@ -161,11 +165,10 @@ try:
         df = drop_unmapped_columns(df, mapped_columns, log)
 
         # Validate schema against target table
+        target_columns = copy_config.get("target_columns", [])
         log.info(f"Conformed and renamed (mapped) source columns: {df.columns}")
-        log.info(f"Target columns: {copy_config['target_columns']}")
-        missing, extras = validate_schema_matches_table(
-            df, copy_config["target_columns"], log
-        )
+        log.info(f"Target columns: {target_columns}")
+        missing, extras = validate_schema_matches_table(df, target_columns, log)
         if missing or extras:
             log.warning(f"⚠️ Missing expected columns: {missing}")
             log.warning(f"⚠️ Unused columns from source: {extras}")
@@ -173,6 +176,22 @@ try:
                 log.error(
                     "❌ Schema mismatch between source DataFrame and target table definition."
                 )
+                raise ValueError("Schema mismatch detected. Check logs for details.")
+        # Validate against schema reference if provided
+
+        schema_ref = copy_config.get("validate_target_columns_against_schema")
+        # Initialize defaults
+        missing, extra = [], []
+
+        if schema_ref:
+            missing, extra = validate_config_against_schema_ref(
+                target_columns, schema_ref, log
+            )
+        if missing or extra:
+            if not allow_partial_schema:
+                log.error("❌ Schema mismatch between config and schema reference.")
+                log.warning(f"⚠️ Missing columns in config: {missing}")
+                log.warning(f"⚠️ Extra columns in config: {extra}")
                 raise ValueError("Schema mismatch detected. Check logs for details.")
 
         # Run pipeline

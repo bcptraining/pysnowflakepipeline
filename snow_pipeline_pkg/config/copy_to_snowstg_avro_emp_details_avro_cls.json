@@ -8,6 +8,7 @@
     "source_location": "@my_s3_stage/Avro_folder/userdata1.avro",
     "source_file_type": "avro",
     "log_file": "logs/pipeline.log",
+    "validate_target_columns_against_schema": "emp_details_avro_cls@v1.0",
     "target_columns": [
         "REGISTRATION",
         "USER_ID",

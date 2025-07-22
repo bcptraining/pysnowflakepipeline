@@ -10,49 +10,6 @@ from snow_pipeline_pkg.transform.schema_mapper import (
     apply_column_mapping,
     drop_unmapped_columns,
 )
-
-# ---------- Utility Functions ----------
-# def map_columns(df, map_columns):
-#     # Remove double qoutes from the column names and drop unwanted columns
-#     cols = df.columns
-#     map_keys = [key.upper() for key in map_columns.keys()]
-#     for c in cols:
-#         df = df.with_column_renamed(c, c.replace('"', ""))
-#     cols = df.columns
-#     for c in cols:
-#         if c.upper() not in map_keys:
-#             # print("Dropped column," + " " + c.upper())
-#             df = df.drop(c.upper())
-
-#     # Rename the dataframe column names
-#     for k, v in map_columns.items():
-#         df = df.with_column_renamed(k.upper(), v.upper())
-#     return df
-
-
-# ---------- Collection rejects ----------
-# def collect_rejects(session, qid, config_file, log):
-#     if not qid:
-#         log.warning("⚠️ No Query ID provided. Skipping reject collection.")
-#         return session.create_dataframe([])  # Return empty frame gracefully
-#     database_name = config_file.get("Database_name")
-#     schema_name = config_file.get("Schema_name")
-#     target_table = config_file.get("Target_table")
-#     reject_table = config_file.get("Reject_table")
-#     rejects = session.sql(
-#         "select *  from table(validate("
-#         + database_name
-#         + "."
-#         + schema_name
-#         + "."
-#         + target_table
-#         + " , job_id =>"
-#         + "'"
-#         + qid
-#         + "'))"
-#     )
-#     rejects.write.mode("append").save_as_table(reject_table)
-#     return rejects
 from snowflake.snowpark.types import StructType
 
 
