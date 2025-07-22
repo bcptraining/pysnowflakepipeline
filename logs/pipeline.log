@@ -1432,3 +1432,1360 @@
 2025-07-18 14:46:46,879 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
 2025-07-18 14:46:47,310 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
 2025-07-18 14:46:47,912 - AVRO_setup_logger - INFO - 🛑 Session 3517213143793670 closed and audit updated.
+2025-07-18 16:59:53,690 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-18 16:59:53,691 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-18 16:59:53,691 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-18 16:59:53,692 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-18 16:59:53
+2025-07-18 16:59:53,692 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-18 16:59:53,744 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-18 16:59:56,763 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-18 16:59:57,045 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143785498  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-18 16:59:57.063000-07:00 2999-01-01
+2025-07-18 16:59:57,045 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-18 16:59:57,046 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-18 16:59:58,747 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-18 16:59:58,841 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 16:59:58,841 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 16:59:58,845 - AVRO_setup_logger - INFO - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-18 16:59:58,847 - AVRO_setup_logger - INFO - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-18 16:59:58,851 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-18 16:59:58,854 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-18 16:59:58,857 - AVRO_setup_logger - INFO - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-18 16:59:59,097 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 16:59:59,099 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 16:59:59,099 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 16:59:59,100 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 16:59:59,100 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: GENDER
+2025-07-18 16:59:59,104 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-18 16:59:59,106 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: CC
+2025-07-18 16:59:59,109 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-18 16:59:59,110 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-18 16:59:59,112 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: SALARY
+2025-07-18 16:59:59,114 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: TITLE
+2025-07-18 16:59:59,115 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-18 16:59:59,161 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 16:59:59,162 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 16:59:59,162 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-18 16:59:59,163 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-18 16:59:59,163 - AVRO_setup_logger - WARNING - ⚠️ Column 'REGISTRATION_DTTM' not found — skipped
+2025-07-18 16:59:59,164 - AVRO_setup_logger - WARNING - ⚠️ Column 'ID' not found — skipped
+2025-07-18 16:59:59,166 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-18 16:59:59,167 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-18 16:59:59,168 - AVRO_setup_logger - WARNING - ⚠️ Column 'EMAIL' not found — skipped
+2025-07-18 16:59:59,218 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 16:59:59,218 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-18 16:59:59,219 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: REGISTRATION
+2025-07-18 16:59:59,222 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_ID
+2025-07-18 16:59:59,223 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_EMAIL
+2025-07-18 17:00:03,620 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-18 17:00:03,620 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-18 17:00:03,730 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-18 17:00:03,790 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 10.1 seconds
+2025-07-18 17:00:04,141 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-18 17:00:04,142 - AVRO_setup_logger - INFO - ✅ 0 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-18 17:00:04,143 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-18 17:00:04,143 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-18 17:00:04,306 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-18 17:00:04,770 - AVRO_setup_logger - INFO - 🛑 Session 3517213143785498 closed and audit updated.
+2025-07-18 17:12:10,159 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-18 17:12:10,159 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-18 17:12:10,159 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-18 17:12:10,160 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-18 17:12:10
+2025-07-18 17:12:10,160 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-18 17:12:10,209 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-18 17:12:12,927 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-18 17:12:13,069 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143781394  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-18 17:12:13.231000-07:00 2999-01-01
+2025-07-18 17:12:13,070 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-18 17:12:13,070 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-18 17:12:14,929 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-18 17:12:15,185 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:12:15,185 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:12:15,186 - AVRO_setup_logger - INFO - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-18 17:12:15,187 - AVRO_setup_logger - INFO - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-18 17:12:15,188 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-18 17:12:15,189 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-18 17:12:15,190 - AVRO_setup_logger - INFO - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-18 17:12:15,254 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:12:15,254 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:12:15,255 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:12:15,255 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:12:15,255 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: GENDER
+2025-07-18 17:12:15,256 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-18 17:12:15,257 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: CC
+2025-07-18 17:12:15,258 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-18 17:12:15,259 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-18 17:12:15,260 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: SALARY
+2025-07-18 17:12:15,260 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: TITLE
+2025-07-18 17:12:15,261 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-18 17:12:15,306 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:12:15,306 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:12:15,306 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-18 17:12:15,306 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-18 17:12:15,307 - AVRO_setup_logger - WARNING - ⚠️ Column 'REGISTRATION_DTTM' not found — skipped
+2025-07-18 17:12:15,307 - AVRO_setup_logger - WARNING - ⚠️ Column 'ID' not found — skipped
+2025-07-18 17:12:15,308 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-18 17:12:15,308 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-18 17:12:15,309 - AVRO_setup_logger - WARNING - ⚠️ Column 'EMAIL' not found — skipped
+2025-07-18 17:12:15,400 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:12:15,400 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-18 17:12:15,400 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: REGISTRATION
+2025-07-18 17:12:15,401 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_ID
+2025-07-18 17:12:15,402 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_EMAIL
+2025-07-18 17:12:16,915 - AVRO_setup_logger - INFO - 📤 Writing 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-18 17:12:20,161 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-18 17:12:20,162 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-18 17:12:20,225 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-18 17:12:20,270 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 10.11 seconds
+2025-07-18 17:12:20,515 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-18 17:12:20,515 - AVRO_setup_logger - INFO - ✅ 0 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-18 17:12:20,515 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-18 17:12:20,516 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-18 17:12:20,642 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-18 17:12:21,317 - AVRO_setup_logger - INFO - 🛑 Session 3517213143781394 closed and audit updated.
+2025-07-18 17:18:55,546 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-18 17:18:55,547 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-18 17:18:55,547 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-18 17:18:55,547 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-18 17:18:55
+2025-07-18 17:18:55,547 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-18 17:18:55,583 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-18 17:18:58,952 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-18 17:18:59,030 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143797774  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-18 17:18:59.255000-07:00 2999-01-01
+2025-07-18 17:18:59,030 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-18 17:18:59,030 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-18 17:19:00,596 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-18 17:19:00,738 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:19:00,739 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:19:00,740 - AVRO_setup_logger - INFO - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-18 17:19:00,741 - AVRO_setup_logger - INFO - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-18 17:19:00,743 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-18 17:19:00,745 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-18 17:19:00,746 - AVRO_setup_logger - INFO - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-18 17:19:00,801 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:19:00,802 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:19:00,803 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:19:00,803 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:19:00,804 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: GENDER
+2025-07-18 17:19:00,807 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-18 17:19:00,810 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: CC
+2025-07-18 17:19:00,813 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-18 17:19:00,815 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-18 17:19:00,818 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: SALARY
+2025-07-18 17:19:00,821 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: TITLE
+2025-07-18 17:19:00,822 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-18 17:19:00,891 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:19:00,891 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:19:00,892 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-18 17:19:00,893 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-18 17:19:00,893 - AVRO_setup_logger - WARNING - ⚠️ Column 'REGISTRATION_DTTM' not found — skipped
+2025-07-18 17:19:00,894 - AVRO_setup_logger - WARNING - ⚠️ Column 'ID' not found — skipped
+2025-07-18 17:19:00,896 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-18 17:19:00,898 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-18 17:19:00,899 - AVRO_setup_logger - WARNING - ⚠️ Column 'EMAIL' not found — skipped
+2025-07-18 17:19:01,008 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:19:01,009 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-18 17:19:01,010 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: REGISTRATION
+2025-07-18 17:19:01,012 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_ID
+2025-07-18 17:19:01,014 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_EMAIL
+2025-07-18 17:19:02,343 - AVRO_setup_logger - INFO - 📤 Writing 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-18 17:19:04,815 - AVRO_setup_logger - INFO - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-18 17:19:06,134 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-18 17:19:06,135 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-18 17:19:06,189 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-18 17:19:06,236 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 10.69 seconds
+2025-07-18 17:19:06,427 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-18 17:19:06,428 - AVRO_setup_logger - INFO - ✅ 0 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-18 17:19:06,429 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-18 17:19:06,430 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-18 17:19:06,551 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-18 17:19:07,191 - AVRO_setup_logger - INFO - 🛑 Session 3517213143797774 closed and audit updated.
+2025-07-18 17:34:20,736 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-18 17:34:20,737 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-18 17:34:20,738 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-18 17:34:20,738 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-18 17:34:20
+2025-07-18 17:34:20,738 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-18 17:34:20,791 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-18 17:34:23,269 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-18 17:34:23,489 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143814150  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-18 17:34:23.576000-07:00 2999-01-01
+2025-07-18 17:34:23,490 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-18 17:34:23,491 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-18 17:34:25,185 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-18 17:34:25,343 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:34:25,345 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:34:25,347 - AVRO_setup_logger - INFO - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-18 17:34:25,352 - AVRO_setup_logger - INFO - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-18 17:34:25,355 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-18 17:34:25,359 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-18 17:34:25,362 - AVRO_setup_logger - INFO - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-18 17:34:25,445 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:34:25,446 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:34:25,447 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:34:25,448 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:34:25,448 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: GENDER
+2025-07-18 17:34:25,451 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-18 17:34:25,454 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: CC
+2025-07-18 17:34:25,457 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-18 17:34:25,459 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-18 17:34:25,462 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: SALARY
+2025-07-18 17:34:25,464 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: TITLE
+2025-07-18 17:34:25,466 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-18 17:34:25,512 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:34:25,514 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:34:25,514 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-18 17:34:25,515 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-18 17:34:25,516 - AVRO_setup_logger - WARNING - ⚠️ Column 'REGISTRATION_DTTM' not found — skipped
+2025-07-18 17:34:25,516 - AVRO_setup_logger - WARNING - ⚠️ Column 'ID' not found — skipped
+2025-07-18 17:34:25,518 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-18 17:34:25,521 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-18 17:34:25,521 - AVRO_setup_logger - WARNING - ⚠️ Column 'EMAIL' not found — skipped
+2025-07-18 17:34:25,594 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:34:25,595 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-18 17:34:25,596 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: REGISTRATION
+2025-07-18 17:34:25,597 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_ID
+2025-07-18 17:34:25,599 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_EMAIL
+2025-07-18 17:34:26,909 - AVRO_setup_logger - DEBUG - 📤 Writing 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-18 17:34:29,411 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-18 17:34:30,936 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-18 17:34:30,937 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-18 17:34:30,988 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-18 17:34:31,037 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 10.3 seconds
+2025-07-18 17:34:31,205 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-18 17:34:31,205 - AVRO_setup_logger - INFO - ✅ 0 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-18 17:34:31,205 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-18 17:34:31,205 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-18 17:34:31,315 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-18 17:34:31,933 - AVRO_setup_logger - INFO - 🛑 Session 3517213143814150 closed and audit updated.
+2025-07-18 17:40:13,309 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-18 17:40:13,310 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-18 17:40:13,310 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-18 17:40:13,310 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-18 17:40:13
+2025-07-18 17:40:13,311 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-18 17:40:13,349 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-18 17:40:14,878 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-18 17:40:15,037 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143822342  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-18 17:40:15.189000-07:00 2999-01-01
+2025-07-18 17:40:15,038 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-18 17:40:15,039 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-18 17:40:16,714 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-18 17:40:16,824 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:40:16,825 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:40:16,826 - AVRO_setup_logger - INFO - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-18 17:40:16,827 - AVRO_setup_logger - INFO - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-18 17:40:16,829 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-18 17:40:16,831 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-18 17:40:16,831 - AVRO_setup_logger - INFO - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-18 17:40:16,882 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:40:16,883 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:40:16,883 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-18 17:40:16,884 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:40:16,884 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: GENDER
+2025-07-18 17:40:16,885 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-18 17:40:16,887 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: CC
+2025-07-18 17:40:16,888 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-18 17:40:16,890 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-18 17:40:16,891 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: SALARY
+2025-07-18 17:40:16,892 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: TITLE
+2025-07-18 17:40:16,892 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-18 17:40:16,948 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:40:16,948 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:40:16,948 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-18 17:40:16,948 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-18 17:40:16,948 - AVRO_setup_logger - WARNING - ⚠️ Column 'REGISTRATION_DTTM' not found — skipped
+2025-07-18 17:40:16,949 - AVRO_setup_logger - WARNING - ⚠️ Column 'ID' not found — skipped
+2025-07-18 17:40:16,949 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-18 17:40:16,950 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-18 17:40:16,950 - AVRO_setup_logger - WARNING - ⚠️ Column 'EMAIL' not found — skipped
+2025-07-18 17:40:17,007 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-18 17:40:17,007 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-18 17:40:17,007 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: REGISTRATION
+2025-07-18 17:40:17,008 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_ID
+2025-07-18 17:40:17,009 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_EMAIL
+2025-07-18 17:40:18,538 - AVRO_setup_logger - DEBUG - 📤 Writing 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-18 17:40:20,887 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-18 17:40:21,932 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-18 17:40:21,933 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-18 17:40:21,991 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-18 17:40:22,041 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 8.73 seconds
+2025-07-18 17:40:22,241 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-18 17:40:22,242 - AVRO_setup_logger - INFO - ✅ 0 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-18 17:40:22,242 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-18 17:40:22,243 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-18 17:40:22,417 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-18 17:40:23,362 - AVRO_setup_logger - INFO - 🛑 Session 3517213143822342 closed and audit updated.
+2025-07-21 08:22:05,149 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 08:22:05,150 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 08:22:05,150 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 08:22:05,150 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 08:22:05
+2025-07-21 08:22:05,150 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 08:22:05,207 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 08:22:07,186 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 08:22:07,308 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143826454  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 08:22:07.477000-07:00 2999-01-01
+2025-07-21 08:22:07,308 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 08:22:07,308 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 08:22:08,780 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 08:22:08,927 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 08:22:08,927 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 08:22:08,929 - AVRO_setup_logger - INFO - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 08:22:08,930 - AVRO_setup_logger - INFO - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 08:22:08,932 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 08:22:08,933 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 08:22:08,935 - AVRO_setup_logger - INFO - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 08:22:09,023 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 08:22:09,023 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 08:22:09,023 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 08:22:09,023 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 08:22:09,023 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 08:22:09,027 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 08:22:09,027 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: CC
+2025-07-21 08:22:09,027 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 08:22:09,027 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 08:22:09,027 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 08:22:09,027 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 08:22:09,027 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 08:22:09,093 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 08:22:09,107 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 08:22:09,107 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 08:22:09,107 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 08:22:09,108 - AVRO_setup_logger - WARNING - ⚠️ Column 'REGISTRATION_DTTM' not found — skipped
+2025-07-21 08:22:09,108 - AVRO_setup_logger - WARNING - ⚠️ Column 'ID' not found — skipped
+2025-07-21 08:22:09,109 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 08:22:09,111 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 08:22:09,111 - AVRO_setup_logger - WARNING - ⚠️ Column 'EMAIL' not found — skipped
+2025-07-21 08:22:09,189 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 08:22:09,189 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 08:22:09,189 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: REGISTRATION
+2025-07-21 08:22:09,190 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_ID
+2025-07-21 08:22:09,191 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_EMAIL
+2025-07-21 08:22:10,169 - AVRO_setup_logger - DEBUG - 📤 Writing 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-21 08:22:12,267 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-21 08:22:13,288 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-21 08:22:13,289 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-21 08:22:13,337 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-21 08:22:13,428 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 8.28 seconds
+2025-07-21 08:22:13,605 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 08:22:13,605 - AVRO_setup_logger - INFO - ✅ 0 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 08:22:13,605 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 08:22:13,605 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 08:22:13,798 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 08:22:14,311 - AVRO_setup_logger - INFO - 🛑 Session 3517213143826454 closed and audit updated.
+2025-07-21 09:22:16,086 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 09:22:16,087 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 09:22:16,087 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 09:22:16,087 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 09:22:16
+2025-07-21 09:22:16,087 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 09:22:16,140 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 09:22:18,330 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 09:22:18,505 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143834650  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 09:22:18.644000-07:00 2999-01-01
+2025-07-21 09:22:18,505 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 09:22:18,505 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 09:22:20,343 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 09:22:20,480 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 09:22:21,166 - AVRO_setup_logger - INFO - 🛑 Session 3517213143834650 closed and audit updated.
+2025-07-21 09:22:21,418 - AVRO_setup_logger - ERROR - ❌ Pipeline execution failed: 'list' object has no attribute 'show'
+2025-07-21 11:23:55,075 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 11:23:55,075 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 11:23:55,075 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 11:23:55,075 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 11:23:55
+2025-07-21 11:23:55,075 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 11:23:55,133 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 11:23:59,445 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 11:23:59,680 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143863302  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 11:23:59.790000-07:00 2999-01-01
+2025-07-21 11:23:59,681 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 11:23:59,681 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 11:24:01,698 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 11:24:01,902 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 11:24:03,335 - AVRO_setup_logger - INFO - 🛑 Session 3517213143863302 closed and audit updated.
+2025-07-21 11:24:03,589 - AVRO_setup_logger - ERROR - ❌ Pipeline execution failed: 'list' object has no attribute 'show'
+2025-07-21 11:31:39,920 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 11:31:39,921 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 11:31:39,921 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 11:31:39,922 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 11:31:39
+2025-07-21 11:31:39,922 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 11:31:39,971 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 11:31:42,197 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 11:31:42,475 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143838746  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 11:31:42.545000-07:00 2999-01-01
+2025-07-21 11:31:42,475 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 11:31:42,475 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 11:31:44,959 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 11:31:45,062 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 11:31:45,065 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 11:31:45,069 - AVRO_setup_logger - INFO - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 11:31:45,073 - AVRO_setup_logger - INFO - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 11:31:45,078 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 11:31:45,083 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 11:31:45,087 - AVRO_setup_logger - INFO - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 11:31:45,165 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 11:31:45,166 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 11:31:45,167 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 11:31:45,167 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 11:31:45,168 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 11:31:45,173 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 11:31:45,178 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: CC
+2025-07-21 11:31:45,183 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 11:31:45,186 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 11:31:45,189 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 11:31:45,192 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 11:31:45,194 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 11:31:45,266 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 11:31:45,266 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 11:31:45,266 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 11:31:45,267 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 11:31:45,267 - AVRO_setup_logger - WARNING - ⚠️ Column 'REGISTRATION_DTTM' not found — skipped
+2025-07-21 11:31:45,267 - AVRO_setup_logger - WARNING - ⚠️ Column 'ID' not found — skipped
+2025-07-21 11:31:45,269 - AVRO_setup_logger - INFO - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 11:31:45,270 - AVRO_setup_logger - INFO - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 11:31:45,270 - AVRO_setup_logger - WARNING - ⚠️ Column 'EMAIL' not found — skipped
+2025-07-21 11:31:45,419 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 11:31:45,419 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 11:31:45,421 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: REGISTRATION
+2025-07-21 11:31:45,421 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_ID
+2025-07-21 11:31:45,425 - AVRO_setup_logger - INFO - 🗑️ Dropping unmapped column: USER_EMAIL
+2025-07-21 11:31:47,109 - AVRO_setup_logger - DEBUG - 📤 Writing 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-21 11:31:49,567 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-21 11:31:50,437 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-21 11:31:50,438 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-21 11:31:50,528 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-21 11:31:50,590 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 10.67 seconds
+2025-07-21 11:31:50,908 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 11:31:50,909 - AVRO_setup_logger - INFO - ✅ 0 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 11:31:50,909 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 11:31:50,909 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 11:31:51,105 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 11:31:51,650 - AVRO_setup_logger - INFO - 🛑 Session 3517213143838746 closed and audit updated.
+2025-07-21 12:30:31,659 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 12:30:31,659 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 12:30:31,659 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 12:30:31,659 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 12:30:31
+2025-07-21 12:30:31,659 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 12:30:31,721 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 12:30:34,908 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 12:30:35,269 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143867398  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 12:30:35.271000-07:00 2999-01-01
+2025-07-21 12:30:35,269 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 12:30:35,269 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 12:30:36,888 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 12:30:37,310 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 12:30:37,311 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 12:30:37,315 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 12:30:37,319 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 12:30:37,323 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 12:30:37,326 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 12:30:37,329 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 12:30:37,410 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 12:30:37,411 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 12:30:37,411 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 12:30:37,411 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 12:30:37,412 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 12:30:37,412 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 12:30:37,414 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 12:30:37,415 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 12:30:37,417 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 12:30:37,420 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 12:30:37,421 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 12:30:37,424 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 12:30:37,426 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 12:30:37,605 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 12:30:37,605 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 12:30:37,605 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 12:30:37,772 - AVRO_setup_logger - DEBUG - 📤 Writing DataFrame to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 12:30:39,313 - AVRO_setup_logger - DEBUG - 📤 Writing 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-21 12:30:42,375 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-21 12:30:43,922 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-21 12:30:43,922 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-21 12:30:44,022 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-21 12:30:44,056 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 12.4 seconds
+2025-07-21 12:30:44,333 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 12:30:44,335 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 12:30:44,336 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 12:30:44,336 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 12:30:44,537 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 12:30:44,993 - AVRO_setup_logger - INFO - 🛑 Session 3517213143867398 closed and audit updated.
+2025-07-21 12:55:00,911 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 12:55:00,912 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 12:55:00,912 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 12:55:00,912 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 12:55:00
+2025-07-21 12:55:00,913 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 12:55:00,963 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 12:55:04,463 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 12:55:04,705 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143846954  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 12:55:04.838000-07:00 2999-01-01
+2025-07-21 12:55:04,705 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 12:55:04,705 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 12:55:06,248 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 12:55:06,609 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 12:55:06,610 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 12:55:06,613 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 12:55:06,617 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 12:55:06,620 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 12:55:06,625 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 12:55:06,631 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 12:55:06,711 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 12:55:06,711 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 12:55:06,712 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 12:55:06,712 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 12:55:06,712 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 12:55:06,713 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 12:55:06,715 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 12:55:06,719 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 12:55:06,722 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 12:55:06,725 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 12:55:06,728 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 12:55:06,730 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 12:55:06,731 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 12:55:06,917 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 12:55:06,918 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 12:55:06,918 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 12:55:08,862 - AVRO_setup_logger - DEBUG - 📤 Writing 1000 rows from df to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/  with columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 12:55:10,498 - AVRO_setup_logger - DEBUG - ✅ Rows unloaded to temp stage: 1000, Bytes in: 68257, Bytes out: 22642
+2025-07-21 12:55:11,827 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-21 12:55:13,000 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-21 12:55:13,001 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-21 12:55:13,420 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-21 12:55:13,506 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 12.59 seconds
+2025-07-21 12:55:13,690 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 12:55:13,690 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 12:55:13,693 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 12:55:13,693 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 12:55:13,878 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 12:55:14,728 - AVRO_setup_logger - INFO - 🛑 Session 3517213143846954 closed and audit updated.
+2025-07-21 13:01:16,930 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 13:01:16,935 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 13:01:16,935 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 13:01:16,935 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 13:01:16
+2025-07-21 13:01:16,935 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 13:01:16,975 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 13:01:19,195 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 13:01:19,391 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143846958  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 13:01:19.611000-07:00 2999-01-01
+2025-07-21 13:01:19,393 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 13:01:19,393 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 13:01:20,985 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 13:01:21,337 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:01:21,342 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:01:21,346 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 13:01:21,350 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 13:01:21,353 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 13:01:21,356 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 13:01:21,360 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 13:01:21,523 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:01:21,523 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:01:21,524 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:01:21,524 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:01:21,525 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:01:21,525 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 13:01:21,526 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 13:01:21,528 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 13:01:21,529 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 13:01:21,531 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 13:01:21,532 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 13:01:21,533 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 13:01:21,535 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 13:01:21,599 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:01:21,600 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:01:21,600 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 13:01:22,840 - AVRO_setup_logger - DEBUG - 📤 Writing 1000 rows from df to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/  with columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:01:24,467 - AVRO_setup_logger - DEBUG - ✅ Rows unloaded to temp stage: 1000, Bytes in: 68257, Bytes out: 22642
+2025-07-21 13:01:25,801 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/
+2025-07-21 13:01:26,722 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-21 13:01:26,722 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-21 13:01:26,827 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-21 13:01:26,879 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 9.94 seconds
+2025-07-21 13:01:27,133 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 13:01:27,133 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 13:01:27,133 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 13:01:27,135 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 13:01:27,283 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 13:01:28,406 - AVRO_setup_logger - INFO - 🛑 Session 3517213143846958 closed and audit updated.
+2025-07-21 13:18:12,182 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 13:18:12,184 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 13:18:12,184 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 13:18:12,184 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 13:18:12
+2025-07-21 13:18:12,185 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 13:19:44,262 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 13:19:44,262 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 13:19:44,262 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 13:19:44,262 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 13:19:44
+2025-07-21 13:19:44,270 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 13:19:44,311 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 13:19:47,322 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 13:19:47,554 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143830586  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 13:19:47.702000-07:00 2999-01-01
+2025-07-21 13:19:47,554 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 13:19:47,554 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 13:19:49,256 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 13:19:49,473 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:19:49,474 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:19:49,476 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 13:19:49,480 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 13:19:49,483 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 13:19:49,486 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 13:19:49,489 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 13:19:49,576 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:19:49,576 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:19:49,576 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:19:49,577 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:19:49,577 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:19:49,577 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 13:19:49,578 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 13:19:49,579 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 13:19:49,580 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 13:19:49,581 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 13:19:49,582 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 13:19:49,582 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 13:19:49,583 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 13:19:49,678 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:19:49,678 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:19:49,680 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 13:19:52,779 - AVRO_setup_logger - DEBUG - ✅ Rows unloaded to temp stage: 1000, Bytes in: 68257, Bytes out: 22642
+2025-07-21 13:19:54,125 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 13:19:55,436 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-21 13:19:55,437 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-21 13:19:55,512 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-21 13:19:55,556 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 11.29 seconds
+2025-07-21 13:19:55,728 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 13:19:55,728 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 13:19:55,728 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 13:19:55,728 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 13:19:55,926 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 13:19:56,536 - AVRO_setup_logger - INFO - 🛑 Session 3517213143830586 closed and audit updated.
+2025-07-21 13:22:43,886 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 13:22:43,886 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 13:22:43,887 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 13:22:43,887 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 13:22:43
+2025-07-21 13:22:43,888 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 13:22:43,925 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 13:22:46,247 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 13:22:46,495 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143806002  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 13:22:46.650000-07:00 2999-01-01
+2025-07-21 13:22:46,495 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 13:22:46,496 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 13:22:47,993 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 13:22:48,153 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:22:48,153 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:22:48,153 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 13:22:48,153 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 13:22:48,171 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 13:22:48,176 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 13:22:48,180 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 13:22:48,264 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:22:48,265 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:22:48,265 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:22:48,266 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:22:48,267 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:22:48,268 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 13:22:48,277 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 13:22:48,281 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 13:22:48,285 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 13:22:48,287 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 13:22:48,290 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 13:22:48,293 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 13:22:48,295 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 13:22:48,465 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:22:48,466 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:22:48,466 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 13:22:50,822 - AVRO_setup_logger - DEBUG - ✅ Rows unloaded to temp stage: 1000, Bytes in: 68257, Bytes out: 22642
+2025-07-21 13:22:52,665 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 13:22:53,701 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-21 13:22:53,702 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-21 13:22:53,791 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-21 13:22:53,836 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 9.95 seconds
+2025-07-21 13:22:54,099 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 13:22:54,100 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 13:22:54,100 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 13:22:54,102 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 13:22:54,252 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 13:22:55,429 - AVRO_setup_logger - INFO - 🛑 Session 3517213143806002 closed and audit updated.
+2025-07-21 13:29:25,720 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 13:29:25,720 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 13:29:25,720 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 13:29:25,720 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 13:29:25
+2025-07-21 13:29:25,720 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 13:29:25,776 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 13:29:27,638 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 13:29:27,897 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143842854  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 13:29:28.030000-07:00 2999-01-01
+2025-07-21 13:29:27,898 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 13:29:27,898 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 13:29:30,080 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 13:29:30,224 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:29:30,224 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:29:30,227 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 13:29:30,231 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 13:29:30,234 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 13:29:30,237 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 13:29:30,241 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 13:29:30,340 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:29:30,341 - AVRO_setup_logger - DEBUG - 🧪 ---------------------DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:29:30,342 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:29:30,342 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:29:30,343 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:29:30,344 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 13:29:30,346 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 13:29:30,349 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 13:29:30,351 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 13:29:30,353 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 13:29:30,356 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 13:29:30,359 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 13:29:30,361 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 13:29:30,423 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:29:30,424 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:29:30,424 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 13:29:32,939 - AVRO_setup_logger - INFO - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:29:34,279 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 13:29:35,202 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-21 13:29:35,203 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-21 13:29:35,256 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-21 13:29:35,353 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 9.63 seconds
+2025-07-21 13:29:35,815 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 13:29:35,816 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 13:29:35,817 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 13:29:35,817 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 13:29:35,964 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 13:29:36,529 - AVRO_setup_logger - INFO - 🛑 Session 3517213143842854 closed and audit updated.
+2025-07-21 13:59:04,790 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 13:59:04,790 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 13:59:04,791 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 13:59:04,791 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 13:59:04
+2025-07-21 13:59:04,791 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 13:59:04,840 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 13:59:07,858 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 13:59:08,104 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143834654  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 13:59:08.255000-07:00 2999-01-01
+2025-07-21 13:59:08,105 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 13:59:08,105 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 13:59:10,110 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 13:59:10,314 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:59:10,314 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:59:10,316 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 13:59:10,318 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 13:59:10,320 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 13:59:10,322 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 13:59:10,324 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 13:59:10,365 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:59:10,365 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:59:10,365 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 13:59:10,367 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:59:10,367 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 13:59:10,368 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 13:59:10,369 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 13:59:10,372 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 13:59:10,373 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 13:59:10,375 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 13:59:10,376 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 13:59:10,377 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 13:59:10,453 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:59:10,453 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:59:10,453 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 13:59:13,385 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 13:59:14,552 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 13:59:16,483 - AVRO_setup_logger - INFO - 🛑 Session 3517213143834654 closed and audit updated.
+2025-07-21 13:59:16,822 - AVRO_setup_logger - ERROR - ❌ Pipeline execution failed: 'QueryRecord' object has no attribute 'query_tag'
+2025-07-21 14:00:56,253 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 14:00:56,253 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 14:00:56,253 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 14:00:56,253 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 14:00:56
+2025-07-21 14:00:56,253 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 14:00:56,301 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 14:00:57,972 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 14:00:58,088 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143851066  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 14:00:58.377000-07:00 2999-01-01
+2025-07-21 14:00:58,089 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 14:00:58,089 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 14:00:59,781 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 14:00:59,920 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:00:59,920 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:00:59,920 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 14:00:59,920 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 14:00:59,920 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 14:00:59,925 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 14:00:59,925 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 14:00:59,986 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:00:59,988 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:00:59,988 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:00:59,989 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:00:59,989 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 14:00:59,991 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 14:00:59,992 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 14:00:59,994 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 14:00:59,996 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 14:00:59,997 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 14:00:59,999 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 14:00:59,999 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 14:01:00,086 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:01:00,086 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:01:00,086 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 14:01:02,649 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:01:03,725 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 14:01:06,235 - AVRO_setup_logger - INFO - 🛑 Session 3517213143851066 closed and audit updated.
+2025-07-21 14:01:06,474 - AVRO_setup_logger - ERROR - ❌ Pipeline execution failed: 'QueryRecord' object has no attribute 'query_tag'
+2025-07-21 14:04:00,934 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 14:04:00,935 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 14:04:00,935 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 14:04:00,935 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 14:04:00
+2025-07-21 14:04:00,935 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 14:04:00,971 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 14:04:03,385 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 14:04:03,603 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143842858  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 14:04:03.784000-07:00 2999-01-01
+2025-07-21 14:04:03,603 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 14:04:03,603 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 14:04:05,218 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 14:04:05,553 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:04:05,553 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:04:05,553 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 14:04:05,553 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 14:04:05,553 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 14:04:05,553 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 14:04:05,553 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 14:04:05,637 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:04:05,637 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:04:05,638 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:04:05,638 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:04:05,638 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 14:04:05,638 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 14:04:05,638 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 14:04:05,638 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 14:04:05,638 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 14:04:05,638 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 14:04:05,643 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 14:04:05,644 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 14:04:05,757 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:04:05,758 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:04:05,758 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 14:04:07,908 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:04:08,961 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 14:04:10,555 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-21 14:04:10,556 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-21 14:04:10,609 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-21 14:04:10,696 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 9.76 seconds
+2025-07-21 14:04:10,964 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 14:04:10,964 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 14:04:10,965 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 14:04:10,965 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 14:04:11,270 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 14:04:11,786 - AVRO_setup_logger - INFO - 🛑 Session 3517213143842858 closed and audit updated.
+2025-07-21 14:10:29,374 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 14:10:29,374 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 14:10:29,375 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 14:10:29,375 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 14:10:29
+2025-07-21 14:10:29,375 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 14:10:29,407 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 14:10:31,287 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 14:10:31,412 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143806006  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 14:10:31.686000-07:00 2999-01-01
+2025-07-21 14:10:31,413 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 14:10:31,413 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 14:10:32,652 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 14:10:32,814 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:10:32,814 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:10:32,817 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 14:10:32,819 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 14:10:32,819 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 14:10:32,819 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 14:10:32,819 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 14:10:33,427 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:10:33,428 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:10:33,429 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:10:33,429 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:10:33,430 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 14:10:33,433 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 14:10:33,436 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 14:10:33,438 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 14:10:33,441 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 14:10:33,443 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 14:10:33,446 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 14:10:33,448 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 14:10:33,530 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:10:33,531 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:10:33,532 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 14:10:36,184 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:10:37,271 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 14:10:38,651 - AVRO_setup_logger - INFO - 🛑 Session 3517213143806006 closed and audit updated.
+2025-07-21 14:10:38,901 - AVRO_setup_logger - ERROR - ❌ Pipeline execution failed: 'QueryHistory' object is not iterable
+2025-07-21 14:13:25,700 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 14:13:25,700 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 14:13:25,700 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 14:13:25,700 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 14:13:25
+2025-07-21 14:13:25,701 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 14:13:25,738 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 14:13:27,817 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 14:13:27,918 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143838750  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 14:13:28.219000-07:00 2999-01-01
+2025-07-21 14:13:27,918 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 14:13:27,918 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 14:13:29,352 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 14:13:29,451 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:13:29,451 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:13:29,451 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 14:13:29,451 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 14:13:29,451 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 14:13:29,451 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 14:13:29,459 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 14:13:29,503 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:13:29,503 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:13:29,503 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:13:29,504 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:13:29,504 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 14:13:29,505 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 14:13:29,506 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 14:13:29,507 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 14:13:29,508 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 14:13:29,510 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 14:13:29,510 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 14:13:29,512 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 14:13:29,597 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:13:29,598 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:13:29,598 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 14:13:32,322 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:13:33,292 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 14:13:34,395 - AVRO_setup_logger - WARNING - ⚠️ No COPY query ID found — downstream reject handling may fail.
+2025-07-21 14:13:34,395 - AVRO_setup_logger - INFO - 🔍 Query ID: None
+2025-07-21 14:13:34,471 - AVRO_setup_logger - WARNING - ⚠️ No Query ID provided. Skipping reject collection.
+2025-07-21 14:13:34,522 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 8.82 seconds
+2025-07-21 14:13:34,780 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 14:13:34,781 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 14:13:34,781 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 14:13:34,782 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 14:13:34,917 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 14:13:35,496 - AVRO_setup_logger - INFO - 🛑 Session 3517213143838750 closed and audit updated.
+2025-07-21 14:16:44,769 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 14:16:44,770 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 14:16:44,770 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 14:16:44,770 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 14:16:44
+2025-07-21 14:16:44,771 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 14:16:44,807 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 14:16:46,472 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 14:16:46,593 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143826490  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 14:16:46.872000-07:00 2999-01-01
+2025-07-21 14:16:46,593 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 14:16:46,593 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 14:16:48,007 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 14:16:48,147 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:16:48,147 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:16:48,152 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 14:16:48,155 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 14:16:48,157 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 14:16:48,158 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 14:16:48,159 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 14:16:48,212 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:16:48,213 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:16:48,213 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:16:48,213 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:16:48,213 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 14:16:48,215 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 14:16:48,216 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 14:16:48,217 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 14:16:48,220 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 14:16:48,223 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 14:16:48,224 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 14:16:48,226 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 14:16:48,314 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:16:48,314 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:16:48,314 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 14:16:50,668 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:16:51,736 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 14:16:52,733 - AVRO_setup_logger - INFO - 🔍 Query ID: 01bdd83c-0206-0823-000c-7ee3000cf1a6
+2025-07-21 14:16:53,334 - AVRO_setup_logger - INFO - 🛑 Session 3517213143826490 closed and audit updated.
+2025-07-21 14:16:53,576 - AVRO_setup_logger - ERROR - ❌ Pipeline execution failed: can only concatenate str (not "NoneType") to str
+2025-07-21 14:20:42,979 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 14:20:42,980 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 14:20:42,980 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 14:20:42,981 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 14:20:42
+2025-07-21 14:20:42,981 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 14:20:43,024 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 14:20:45,016 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 14:20:45,388 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143846962  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 14:20:45.462000-07:00 2999-01-01
+2025-07-21 14:20:45,422 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 14:20:45,422 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 14:20:46,645 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 14:20:46,809 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:20:46,809 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:20:46,812 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 14:20:46,815 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 14:20:46,820 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 14:20:46,831 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 14:20:46,834 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 14:20:46,901 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 14:20:46,901 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 14:20:46,965 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:20:46,965 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:20:46,966 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 14:20:49,059 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:20:50,700 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 14:20:52,018 - AVRO_setup_logger - INFO - 🔍 Query ID: 01bdd840-0206-07ba-000c-7ee3000cd186
+2025-07-21 14:20:52,744 - AVRO_setup_logger - INFO - 🛑 Session 3517213143846962 closed and audit updated.
+2025-07-21 14:20:53,531 - AVRO_setup_logger - ERROR - ❌ Pipeline execution failed: can only concatenate str (not "NoneType") to str
+2025-07-21 14:31:07,534 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-21 14:31:07,534 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-21 14:31:07,534 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-21 14:31:07,534 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-21 14:31:07
+2025-07-21 14:31:07,550 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-21 14:31:07,589 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-21 14:31:10,582 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-21 14:31:10,752 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143842862  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-21 14:31:11.028000-07:00 2999-01-01
+2025-07-21 14:31:10,753 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-21 14:31:10,753 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-21 14:31:12,150 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-21 14:31:12,476 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:31:12,477 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:31:12,479 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-21 14:31:12,483 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-21 14:31:12,486 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-21 14:31:12,489 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-21 14:31:12,493 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-21 14:31:12,577 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:31:12,578 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:31:12,579 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-21 14:31:12,579 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:31:12,580 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-21 14:31:12,583 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-21 14:31:12,586 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-21 14:31:12,589 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-21 14:31:12,592 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-21 14:31:12,594 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-21 14:31:12,597 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-21 14:31:12,599 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-21 14:31:12,730 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:31:12,731 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:31:12,732 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-21 14:31:15,955 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-21 14:31:17,218 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-21 14:31:18,817 - AVRO_setup_logger - INFO - 🔍 Query ID: 01bdd84b-0206-06b5-000c-7ee3000c12f2
+2025-07-21 14:31:18,872 - AVRO_setup_logger - DEBUG - 🧪 Running reject collection query: SELECT * FROM TABLE(
+        VALIDATE(
+            DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS,
+            JOB_ID => '01bdd84b-0206-06b5-000c-7ee3000c12f2'
+        )
+    )
+2025-07-21 14:31:19,752 - AVRO_setup_logger - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-21 14:31:19,753 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 12.2 seconds
+2025-07-21 14:31:20,151 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 14:31:20,151 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-21 14:31:20,151 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-21 14:31:20,151 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-21 14:31:20,603 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-21 14:31:21,071 - AVRO_setup_logger - INFO - 🛑 Session 3517213143842862 closed and audit updated.
+2025-07-22 06:11:38,374 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-22 06:11:38,374 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-22 06:11:38,374 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-22 06:11:38,374 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-22 06:11:38
+2025-07-22 06:11:38,374 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-22 06:11:38,418 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-22 06:11:46,245 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-22 06:11:46,594 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143846966  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-22 06:11:46.806000-07:00 2999-01-01
+2025-07-22 06:11:46,594 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-22 06:11:46,595 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-22 06:11:48,291 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-22 06:11:48,647 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 06:11:48,647 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 06:11:48,653 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-22 06:11:48,653 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-22 06:11:48,661 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-22 06:11:48,665 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-22 06:11:48,665 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-22 06:11:48,749 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 06:11:48,752 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 06:11:48,753 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 06:11:48,753 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 06:11:48,754 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-22 06:11:48,757 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-22 06:11:48,760 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-22 06:11:48,763 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-22 06:11:48,765 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-22 06:11:48,768 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-22 06:11:48,771 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-22 06:11:48,773 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-22 06:11:48,851 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 06:11:48,851 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 06:11:48,852 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-22 06:11:51,717 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 06:11:53,302 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-22 06:11:55,007 - AVRO_setup_logger - INFO - 🔍 Query ID: 01bddbf7-0206-0df7-000c-7ee3000d6016
+2025-07-22 06:11:55,102 - AVRO_setup_logger - DEBUG - 🧪 Running reject collection query: SELECT * FROM TABLE(
+        VALIDATE(
+            DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS,
+            JOB_ID => '01bddbf7-0206-0df7-000c-7ee3000d6016'
+        )
+    )
+2025-07-22 06:11:55,924 - AVRO_setup_logger - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-22 06:11:55,924 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 17.55 seconds
+2025-07-22 06:11:56,666 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-22 06:11:56,667 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-22 06:11:56,668 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-22 06:11:56,668 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-22 06:11:57,107 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-22 06:11:57,965 - AVRO_setup_logger - INFO - 🛑 Session 3517213143846966 closed and audit updated.
+2025-07-22 07:48:20,247 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-22 07:48:20,249 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-22 07:48:20,249 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-22 07:48:20,249 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-22 07:48:20
+2025-07-22 07:48:20,249 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-22 07:48:20,300 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-22 07:48:23,733 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-22 07:48:24,102 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143838762  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-22 07:48:24.293000-07:00 2999-01-01
+2025-07-22 07:48:24,102 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-22 07:48:24,112 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-22 07:48:27,112 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-22 07:48:27,316 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 07:48:27,317 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 07:48:27,319 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-22 07:48:27,321 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-22 07:48:27,321 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-22 07:48:27,324 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-22 07:48:27,324 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-22 07:48:27,415 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 07:48:27,415 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 07:48:27,415 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 07:48:27,415 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 07:48:27,415 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-22 07:48:27,415 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-22 07:48:27,430 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-22 07:48:27,433 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-22 07:48:27,435 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-22 07:48:27,436 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-22 07:48:27,436 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-22 07:48:27,436 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-22 07:48:27,520 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 07:48:27,522 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 07:48:27,522 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-22 07:48:30,079 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 07:48:31,766 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-22 07:48:33,666 - AVRO_setup_logger - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bddc58-0206-0823-000c-7ee3000cf212
+2025-07-22 07:48:33,667 - AVRO_setup_logger - INFO - 🔍 Query ID: 01bddc58-0206-0823-000c-7ee3000cf212
+2025-07-22 07:48:33,710 - AVRO_setup_logger - DEBUG - 🧪 Running reject collection query: SELECT * FROM TABLE(
+        VALIDATE(
+            DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS,
+            JOB_ID => '01bddc58-0206-0823-000c-7ee3000cf212'
+        )
+    )
+2025-07-22 07:48:34,807 - AVRO_setup_logger - INFO - 🛑 Session 3517213143838762 closed and audit updated.
+2025-07-22 07:48:35,098 - AVRO_setup_logger - ERROR - ❌ Pipeline execution failed: (1304): 01bddc58-0206-07ba-000c-7ee3000cd1be: 002018 (22023): SQL compilation error:
+Invalid argument [Provided job UUID not for a COPY job] for table function. Table function argument is required to be a constant.
+2025-07-22 07:52:54,833 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-22 07:52:54,833 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-22 07:52:54,833 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-22 07:52:54,833 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-22 07:52:54
+2025-07-22 07:52:54,833 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-22 07:52:54,884 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-22 07:52:56,537 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-22 07:52:56,876 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143875590  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-22 07:52:57.181000-07:00 2999-01-01
+2025-07-22 07:52:56,878 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-22 07:52:56,878 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-22 07:52:58,373 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-22 07:52:58,482 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 07:52:58,482 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 07:52:58,496 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-22 07:52:58,498 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-22 07:52:58,500 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-22 07:52:58,501 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-22 07:52:58,504 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-22 07:52:58,566 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 07:52:58,566 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 07:52:58,566 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 07:52:58,566 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 07:52:58,566 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-22 07:52:58,566 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-22 07:52:58,566 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-22 07:52:58,581 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-22 07:52:58,583 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-22 07:52:58,584 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-22 07:52:58,586 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-22 07:52:58,587 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-22 07:52:58,678 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 07:52:58,679 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 07:52:58,679 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-22 07:53:01,754 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 07:53:03,536 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-22 07:53:04,823 - AVRO_setup_logger - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bddc5d-0206-0d70-000c-7ee3000d503e
+2025-07-22 07:53:04,823 - AVRO_setup_logger - INFO - 🔍 Query ID: 01bddc5d-0206-0d70-000c-7ee3000d503e
+2025-07-22 07:53:04,871 - AVRO_setup_logger - DEBUG - 🧪 Running reject collection query: SELECT * FROM TABLE(
+        VALIDATE(
+            DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS,
+            JOB_ID => '01bddc5d-0206-0d70-000c-7ee3000d503e'
+        )
+    )
+2025-07-22 07:53:06,086 - AVRO_setup_logger - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-22 07:53:06,086 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 11.25 seconds
+2025-07-22 07:53:06,488 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-22 07:53:06,488 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-22 07:53:06,488 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-22 07:53:06,492 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-22 07:53:07,104 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-22 07:53:07,525 - AVRO_setup_logger - INFO - 🛑 Session 3517213143875590 closed and audit updated.
+2025-07-22 09:31:37,048 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-22 09:31:37,048 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-22 09:31:37,048 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-22 09:31:37,048 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-22 09:31:37
+2025-07-22 09:31:37,048 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-22 09:31:37,094 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-22 09:31:44,605 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-22 09:31:44,850 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143875594  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-22 09:31:45.199000-07:00 2999-01-01
+2025-07-22 09:31:44,852 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-22 09:31:44,852 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-22 09:31:46,957 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-22 09:31:47,211 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 09:31:47,211 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 09:31:47,211 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-22 09:31:47,216 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-22 09:31:47,216 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-22 09:31:47,216 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-22 09:31:47,216 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-22 09:31:47,403 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 09:31:47,404 - AVRO_setup_logger - DEBUG - ✅ c ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 09:31:47,404 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 09:31:47,405 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 09:31:47,405 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-22 09:31:47,406 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-22 09:31:47,407 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-22 09:31:47,407 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-22 09:31:47,408 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-22 09:31:47,409 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-22 09:31:47,410 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-22 09:31:47,410 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-22 09:31:47,471 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 09:31:47,471 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 09:31:47,471 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-22 09:31:50,747 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 09:31:51,976 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-22 09:31:53,511 - AVRO_setup_logger - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bddcbf-0206-07ba-000c-7ee3000cd1ea
+2025-07-22 09:31:53,511 - AVRO_setup_logger - INFO - 🔍 Query ID: 01bddcbf-0206-07ba-000c-7ee3000cd1ea
+2025-07-22 09:31:53,548 - AVRO_setup_logger - DEBUG - 🧪 Running reject collection query: SELECT * FROM TABLE(
+        VALIDATE(
+            DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS,
+            JOB_ID => '01bddcbf-0206-07ba-000c-7ee3000cd1ea'
+        )
+    )
+2025-07-22 09:31:54,270 - AVRO_setup_logger - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-22 09:31:54,270 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 17.22 seconds
+2025-07-22 09:31:55,557 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-22 09:31:55,557 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-22 09:31:55,557 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-22 09:31:55,562 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-22 09:31:56,250 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-22 09:31:57,034 - AVRO_setup_logger - INFO - 🛑 Session 3517213143875594 closed and audit updated.
+2025-07-22 11:01:02,892 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-22 11:01:02,892 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-22 11:01:02,892 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-22 11:01:02,892 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-22 11:01:02
+2025-07-22 11:01:02,892 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-22 11:01:02,944 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-22 11:01:06,908 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-22 11:01:07,263 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143879686  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-22 11:01:07.529000-07:00 2999-01-01
+2025-07-22 11:01:07,263 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-22 11:01:07,263 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-22 11:01:09,803 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-22 11:01:10,082 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 11:01:10,083 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 11:01:10,084 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-22 11:01:10,084 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-22 11:01:10,086 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-22 11:01:10,089 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-22 11:01:10,091 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-22 11:01:10,135 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 11:01:10,135 - AVRO_setup_logger - DEBUG - ✅ Column mappings ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 11:01:10,135 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 11:01:10,135 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 11:01:10,135 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-22 11:01:10,137 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-22 11:01:10,139 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-22 11:01:10,139 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-22 11:01:10,139 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-22 11:01:10,142 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-22 11:01:10,143 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-22 11:01:10,144 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-22 11:01:10,239 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 11:01:10,239 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 11:01:10,239 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-22 11:01:14,282 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 11:01:15,859 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-22 11:01:17,492 - AVRO_setup_logger - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bddd19-0206-07ba-000c-7ee3000cd1fa
+2025-07-22 11:01:17,492 - AVRO_setup_logger - INFO - 🔍 Query ID: 01bddd19-0206-07ba-000c-7ee3000cd1fa
+2025-07-22 11:01:17,556 - AVRO_setup_logger - DEBUG - 🧪 Running reject collection query: SELECT * FROM TABLE(
+        VALIDATE(
+            DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS,
+            JOB_ID => '01bddd19-0206-07ba-000c-7ee3000cd1fa'
+        )
+    )
+2025-07-22 11:01:18,634 - AVRO_setup_logger - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-22 11:01:18,634 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 15.74 seconds
+2025-07-22 11:01:19,193 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-22 11:01:19,193 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-22 11:01:19,194 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-22 11:01:19,194 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-22 11:01:20,140 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-22 11:01:20,861 - AVRO_setup_logger - INFO - 🛑 Session 3517213143879686 closed and audit updated.
+2025-07-22 11:02:56,250 - AVRO_setup_logger - DEBUG - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-22 11:02:56,250 - AVRO_setup_logger - INFO - ✅ All required dependencies are installed.
+2025-07-22 11:02:56,250 - AVRO_setup_logger - DEBUG - ✅ copy_config loaded with required keys present: logs/pipeline.log
+2025-07-22 11:02:56,251 - AVRO_setup_logger - INFO - ✅ Pipeline started: 2025-07-22 11:02:56
+2025-07-22 11:02:56,251 - AVRO_setup_logger - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-22 11:02:56,303 - AVRO_setup_logger - INFO - 🔗 Creating Snowpark session...
+2025-07-22 11:02:58,727 - AVRO_setup_logger - INFO - 🧊 Session audit logged with:
+2025-07-22 11:02:58,835 - AVRO_setup_logger - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143879690  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-22 11:02:59.348000-07:00 2999-01-01
+2025-07-22 11:02:58,839 - AVRO_setup_logger - DEBUG - 🔄 Column mapping defined: {'REGISTRATION_DTTM': 'REGISTRATION', 'ID': 'USER_ID', 'FIRST_NAME': 'FIRST_NAME', 'LAST_NAME': 'LAST_NAME', 'EMAIL': 'USER_EMAIL'}
+2025-07-22 11:02:58,839 - AVRO_setup_logger - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-22 11:03:00,511 - AVRO_setup_logger - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-22 11:03:00,716 - AVRO_setup_logger - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 11:03:00,717 - AVRO_setup_logger - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 11:03:00,717 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'REGISTRATION_DTTM' → 'REGISTRATION'
+2025-07-22 11:03:00,719 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'ID' → 'USER_ID'
+2025-07-22 11:03:00,722 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'FIRST_NAME' → 'FIRST_NAME'
+2025-07-22 11:03:00,722 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'LAST_NAME' → 'LAST_NAME'
+2025-07-22 11:03:00,722 - AVRO_setup_logger - DEBUG - 🔄 Renamed 'EMAIL' → 'USER_EMAIL'
+2025-07-22 11:03:00,817 - AVRO_setup_logger - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 11:03:00,817 - AVRO_setup_logger - DEBUG - ✅ Column mappings ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 11:03:00,817 - AVRO_setup_logger - DEBUG - 🧪 DataFrame columns before drop: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-22 11:03:00,817 - AVRO_setup_logger - DEBUG - ✅ Mapped columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 11:03:00,817 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: GENDER
+2025-07-22 11:03:00,817 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: IP_ADDRESS
+2025-07-22 11:03:00,817 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: CC
+2025-07-22 11:03:00,817 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COUNTRY
+2025-07-22 11:03:00,817 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: BIRTHDATE
+2025-07-22 11:03:00,823 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: SALARY
+2025-07-22 11:03:00,824 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: TITLE
+2025-07-22 11:03:00,824 - AVRO_setup_logger - DEBUG - 🗑️ Dropping unmapped column: COMMENTS
+2025-07-22 11:03:00,978 - AVRO_setup_logger - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 11:03:00,978 - AVRO_setup_logger - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 11:03:00,984 - AVRO_setup_logger - INFO - ✅ All schema columns matched.
+2025-07-22 11:03:03,744 - AVRO_setup_logger - DEBUG - ✅ Successfully wrote 1000 rows to temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ wit columns ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-22 11:03:05,024 - AVRO_setup_logger - DEBUG - 📤 Read 1000 rows from temporary stage: @demo_db.public.mystage/EMP_DETAILS_AVRO_CLS/ with columns ['"c1"', '"c2"', '"c3"', '"c4"', '"c5"']
+2025-07-22 11:03:06,230 - AVRO_setup_logger - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bddd1b-0206-08dd-000c-7ee3000cc232
+2025-07-22 11:03:06,231 - AVRO_setup_logger - INFO - 🔍 Query ID: 01bddd1b-0206-08dd-000c-7ee3000cc232
+2025-07-22 11:03:06,304 - AVRO_setup_logger - DEBUG - 🧪 Running reject collection query: SELECT * FROM TABLE(
+        VALIDATE(
+            DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS,
+            JOB_ID => '01bddd1b-0206-08dd-000c-7ee3000cc232'
+        )
+    )
+2025-07-22 11:03:07,446 - AVRO_setup_logger - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-22 11:03:07,446 - AVRO_setup_logger - INFO - ⏱️ Pipeline completed in 11.2 seconds
+2025-07-22 11:03:07,943 - AVRO_setup_logger - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-22 11:03:07,943 - AVRO_setup_logger - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-22 11:03:07,943 - AVRO_setup_logger - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-22 11:03:07,943 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
+2025-07-22 11:03:08,355 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-22 11:03:09,006 - AVRO_setup_logger - INFO - 🛑 Session 3517213143879690 closed and audit updated.

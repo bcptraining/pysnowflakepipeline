@@ -25,7 +25,7 @@ def apply_column_mapping(
         tgt = mapped.strip('"').upper()
         if src in source_cols:
             df = df.with_column_renamed(src, tgt)
-            log.info(f"🔄 Renamed '{src}' → '{tgt}'")
+            log.debug(f"🔄 Renamed '{src}' → '{tgt}'")
         else:
             log.warning(f"⚠️ Column '{src}' not found — skipped")
 
@@ -51,7 +51,7 @@ def drop_unmapped_columns(
         raise ValueError("No mapped columns present in DataFrame.")
 
     for col_name in cols_to_drop:
-        log.info(f"🗑️ Dropping unmapped column: {col_name}")
+        log.debug(f"🗑️ Dropping unmapped column: {col_name}")
         df = df.drop(col_name)
 
     return df

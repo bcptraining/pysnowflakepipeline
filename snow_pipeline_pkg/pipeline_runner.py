@@ -1,9 +1,18 @@
-from ingest.avro_loader import load_avro_file
-from transform.schema_mapper import apply_column_mapping, drop_unmapped_columns
-from validate.quality_checks import validate_schema_matches_table
-from config.schemas import emp_details_avro_cls
+import time
+import sys
+import os
+import json
+from snow_pipeline_pkg.ingest.avro_loader import load_avro_file
+from snow_pipeline_pkg.transform.schema_mapper import (
+    apply_column_mapping,
+    drop_unmapped_columns,
+)
+from snow_pipeline_pkg.validate.quality_checks import validate_schema_matches_table
+
+# from snow_pipeline_pkg.config.schemas import emp_details_avro_cls # -- flagged as not used
 from snow_pipeline_pkg.utils.log_setup import setup_logger
-from snowflake.snowpark.types import StructType, StructField, StringType, LongType
+
+# from snowflake.snowpark.types import StructType, StructField, StringType, LongType
 
 # from snow_pipeline_pkg.utils.connection_loader import load_connection_config
 from snow_pipeline_pkg.utils.snowflake_session import managed_snowflake_session
@@ -12,7 +21,8 @@ from snow_pipeline_pkg.writeback.stage_writer import (
     copy_to_table_semi_struct_data,
     collect_rejects,
 )
-from snowflake.snowpark.types import StructType, StructField, StringType
+
+# from snowflake.snowpark.types import StructType, StructField, StringType
 from snow_pipeline_pkg.utils.validators import check_dependencies
 
 # from transform.schema_mapper import map_columns
@@ -23,7 +33,8 @@ from pathlib import Path
 import os
 import time
 import json
-from snowflake.snowpark.functions import col
+
+# from snowflake.snowpark.functions import col
 
 # ---------- Utility Functions ----------
 
@@ -59,32 +70,10 @@ def validate_config_keys(config, keys, logger):
             raise KeyError(f"Missing config key: {key}")
 
 
-# def load_config(config_path):
-#     if not os.path.isfile(config_path):
-#         raise FileNotFoundError(f"❌ File not found: {config_path}")
-#     with open(config_path, "r", encoding="utf-8") as f:
-#         content = f.read()
-#         if not content.strip():
-#             raise ValueError("⚠️ JSON config file is empty.")
-#         return json.loads(content)
-
-# def apply_column_mapping(df, mapping, log):
-#     source_cols = set(df.columns)
-#     for raw, mapped in mapping.items():
-#         src = raw.strip('"').upper()
-#         tgt = mapped.strip('"').upper()
-#         if src in source_cols:
-#             df = df.with_column_renamed(src, tgt)
-#             log.info(f"🔄 Renamed '{src}' → '{tgt}'")
-#         else:
-#             log.warning(f"⚠️ Column '{src}' not found — skipped")
-#     return df
-
-
 #  --------- Import schemas ----------
 # src_stg_schema.emp_details_avro_cls = src_stg_schema.int_emp_details_avro
-expected_columns = [field.name for field in emp_details_avro_cls.fields]
-
+# expected_columns = [field.name for field in emp_details_avro_cls.fields]
+# log.debug(f"✅ Log initialized with log_file: {log_file}")
 # ---------- Logger Initialization ----------
 # first we need to get log_file name from the config file
 config_path = Path(
@@ -131,16 +120,10 @@ start_time = time.time()
 
 #  --------- 1. Determine path to Snowpark connection config ----------
 # 3 ways the path can be determined: CLI arg, environment variable or default
-config_override = (
-    sys.argv[1] if len(sys.argv) > 1 else None
-)  # if path is passed as CLI arg
-# resolved_path = config_override or os.getenv(
-#     "SNOWFLAKE_CONFIG", "./config/connection_details.json"
-# )
+config_override = sys.argv[1] if len(sys.argv) > 1 else None
 resolved_path = config_override or os.getenv(
     "SNOWFLAKE_CONFIG", "snow_pipeline_pkg/config/connection_details.json"
 )
-
 
 log.info(f"📁 Connection config file determined to be: {resolved_path}")
 
@@ -148,19 +131,6 @@ log.info(f"📁 Connection config file determined to be: {resolved_path}")
 
 try:
     with managed_snowflake_session(config_path=resolved_path, log=log) as session:
-
-        # # Inspect columns from raw Avro source file
-        # if not source_location:
-        #     log.error("❌ source_location is missing from config.")
-        #     raise ValueError("Missing Source_location in configuration.")
-
-        # try:
-        #     df = session.read.avro(source_location)
-        # except Exception as avro_err:
-        #     log.error(f"❌ Failed to read Avro file: {avro_err}")
-        #     raise
-
-        # log.info(f"🔍 Loaded Avro data from {source_location} with columns: {df.columns}")
 
         if log is None:
             raise ValueError(
@@ -175,9 +145,6 @@ try:
         else:
             log.debug(f"🔄 Column mapping defined: {mapping}")
 
-        # Conform columns for comparison -- '"registration_dttm"' --> 'REGISTRATION_DTTM'
-        # df = df.select([normalize_column(c) for c in df.columns])
-
         df = load_avro_file(session, copy_config, log)
         log.info(
             f"🔍 Loaded Avro data from {source_location} with columns: {df.columns}"
@@ -189,10 +156,8 @@ try:
 
         # Drop unmapped columns
         mapped_columns = list(mapping.values())
-        log.debug(
-            f"🧪 ---------------------DataFrame columns before drop: {df.columns}"
-        )
 
+        log.debug(f"✅ Column mappings {mapped_columns}")
         df = drop_unmapped_columns(df, mapped_columns, log)
 
         # Validate schema against target table
@@ -209,16 +174,13 @@ try:
                     "❌ Schema mismatch between source DataFrame and target table definition."
                 )
                 raise ValueError("Schema mismatch detected. Check logs for details.")
-        else:
-            log.info("✅ All schema columns matched.")
 
         # Run pipeline
         copied_into_result, qid = copy_to_table_semi_struct_data(
             session,
             copy_config,
-            # emp_details_avro_cls.schema if hasattr(emp_details_avro_cls, 'schema') else None,
             df,  # This is the cleaned and validated data frame
-            log=log,  # ← This must be explicitly passed as a keyword argument
+            log=log,  # ← The log reference must be explicitly passed as a keyword argument
         )
 
         log.info(f"🔍 Query ID: {qid}")
@@ -234,8 +196,8 @@ try:
         log.info("✅ Pipeline execution completed successfully.")
 
         #  Output a summary record to a JSON file to be surfaced in a streamlit dashboard
-        files_loaded = copied_into_result_df.count()
-        rows_rejected = rejects_df.count()
+        # files_loaded = copied_into_result_df.count()
+        # rows_rejected = rejects_df.count()
         summary = {
             "start_time": time.strftime(
                 "%Y-%m-%d %H:%M:%S", time.localtime(start_time)
@@ -248,8 +210,8 @@ try:
             "query_id": qid,
         }
         # Summarize the rejects
-        files_loaded = copied_into_result_df.count()
-        rows_rejected = rejects_df.count()
+        # files_loaded = copied_into_result_df.count()
+        # rows_rejected = rejects_df.count()
         summary = {
             "start_time": time.strftime(
                 "%Y-%m-%d %H:%M:%S", time.localtime(start_time)
@@ -298,20 +260,3 @@ try:
 except Exception as err:
     log.error(f"❌ Pipeline execution failed: {err}")
     raise
-
-
-# log = setup_logger(log_to_file=True, log_filename="logs/pipeline.log")
-# # log = logging.getLogger(__name__)
-
-
-# # log = logging.getLogger("session_logger")
-# expected_columns = [field.name for field in emp_details_avro_cls.fields]
-
-# df = load_avro_file(session, config_snow_copy, log)
-# # # Normalize column names (strip quotes, uppercase)
-# # df = apply_column_mapping(df, src_stg_schema.emp_details_avro_cls.column_mapping, log)
-
-# df = apply_column_mapping(df, config["map_columns"], log)
-# df = drop_unmapped_columns(df, config["map_columns"], log)
-
-# missing, extras = validate_schema_matches_table(df, config["target_columns"], log)

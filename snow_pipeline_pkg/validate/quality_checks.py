@@ -3,22 +3,22 @@ from typing import List, Tuple
 import logging
 
 
-def validate_column_overlap(df: DataFrame, expected_columns: List[str]) -> bool:
-    """
-    Checks if DataFrame columns overlap with expected schema columns (case-insensitive).
+# def validate_column_overlap(df: DataFrame, expected_columns: List[str]) -> bool:
+#     """
+#     Checks if DataFrame columns overlap with expected schema columns (case-insensitive).
 
-    Args:
-        df (DataFrame): Snowpark DataFrame.
-        expected_columns (List[str]): List of expected column names.
+#     Args:
+#         df (DataFrame): Snowpark DataFrame.
+#         expected_columns (List[str]): List of expected column names.
 
-    Returns:
-        bool: True if there is any column overlap; False otherwise.
-    """
-    df_cols = set(c.upper() for c in df.columns)
-    expected_set = set(c.upper() for c in expected_columns)
+#     Returns:
+#         bool: True if there is any column overlap; False otherwise.
+#     """
+#     df_cols = set(c.upper() for c in df.columns)
+#     expected_set = set(c.upper() for c in expected_columns)
 
-    overlap = df_cols & expected_set
-    return bool(overlap)
+#     overlap = df_cols & expected_set
+#     return bool(overlap)
 
 
 def validate_schema_matches_table(
