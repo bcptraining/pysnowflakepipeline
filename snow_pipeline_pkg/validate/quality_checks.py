@@ -61,7 +61,18 @@ def validate_config_against_schema_ref(
 ) -> Tuple[List[str], List[str]]:
     schema_key, _, schema_version = schema_ref.partition("@")
     schema = schema_registry.get(schema_key, {}).get(schema_version)
-
+    available_versions = list(schema_registry.get(schema_key.lower(), {}).keys())
+    # log.warning(f"⚠️ No schema found for '{schema_key}@{schema_version}'. Available versions: {available_versions}")
+    log.info(
+        f"🔍 Validating target columns against schema reference '{schema_ref}' with available versions: {available_versions}"
+    )
+    if schema_version and schema_version not in available_versions:
+        log.warning(
+            f"⚠️ Schema version '{schema_version}' not found for '{schema_key}'. Available versions: {available_versions}"
+        )
+        raise ValueError(
+            f"Schema version '{schema_version}' not found for '{schema_key}'."
+        )
     if not schema:
         log.warning(f"⚠️ No schema found for reference: {schema_ref}")
         return [], []

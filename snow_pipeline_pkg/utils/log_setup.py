@@ -56,7 +56,7 @@ def setup_logger(
     name: str = "pipeline_logger",
     log_to_file: bool = False,
     log_filename: str = "pipeline.log",
-    level=logging.DEBUG,
+    level=logging.INFO,
 ):
     try:
         logger = logging.getLogger(name)

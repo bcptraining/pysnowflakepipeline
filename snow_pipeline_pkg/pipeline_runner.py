@@ -193,6 +193,10 @@ try:
                 log.warning(f"⚠️ Missing columns in config: {missing}")
                 log.warning(f"⚠️ Extra columns in config: {extra}")
                 raise ValueError("Schema mismatch detected. Check logs for details.")
+        # else:
+        #     log.info(
+        #         f"✅ Config target columns match schema reference '{schema_ref}' exactly."
+        #     )
 
         # Run pipeline
         copied_into_result, qid = copy_to_table_semi_struct_data(

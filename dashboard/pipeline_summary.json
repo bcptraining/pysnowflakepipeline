@@ -1,11 +1,11 @@
 {
-  "start_time": "2025-07-22 16:47:59",
-  "end_time": "2025-07-22 16:48:08",
-  "duration_sec": 8.45,
+  "start_time": "2025-07-23 09:42:04",
+  "end_time": "2025-07-23 09:42:13",
+  "duration_sec": 8.96,
   "files_loaded": 1,
   "rows_inserted": 1000,
   "rows_rejected": 0,
-  "query_id": "01bdde74-0206-07ba-000c-7ee3000cd2ea",
+  "query_id": "01bde26a-0206-0eed-000c-7ee3000d913a",
   "rejects": {
     "count": 0,
     "columns": [
