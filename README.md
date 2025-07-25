@@ -77,50 +77,59 @@ This script creates:
 ```
 snow_pipelineproject/
 ├── README.md
+├── __init__.py
+├── dashboard
+│   ├── dashboard.py
+│   ├── pipeline_run_history.json
+│   ├── pipeline_summary.json
+├── environment.yml
+├── logs
+│   ├── pipeline.log
+│   ├── pipeline_v3.log
+├── project_structure.txt
 ├── pyproject.toml
 ├── requirements.txt
 ├── setup.py
-├── project_structure.txt
-├── logs/
-│   └── pipeline.log
-├── dashboard/
-│   └── pipeline_summary.json
-├── snow_pipeline_pkg/
-│   ├── pipeline_runner.py
-│   ├── config/
-│   │   ├── __init__.py
+├── setup_snowflake_resources.sql
+├── snow_pipeline_pkg
+│   ├── __init__.py
+│   ├── __main__.py
+│   ├── config
 │   │   ├── connection_details.json
 │   │   ├── copy_to_snowstg_avro_emp_details_avro_cls.json
 │   │   ├── schemas.py
-│   │   └── snowflake_private_key.p8
-│   ├── ingest/
+│   │   ├── snowflake_private_key.p8
+│   ├── ingest
 │   │   ├── __init__.py
-│   │   └── avro_loader.py
-│   ├── transform/
+│   │   ├── avro_loader.py
+│   ├── pipeline_runner.py
+│   ├── transform
 │   │   ├── __init__.py
-│   │   └── schema_mapper.py
-│   ├── validate/
-│   │   ├── __init__.py
-│   │   └── quality_checks.py
-│   ├── writeback/
-│   │   ├── __init__.py
-│   │   └── stage_writer.py
-│   ├── utils/
+│   │   ├── schema_mapper.py
+│   ├── utils
 │   │   ├── __init__.py
 │   │   ├── config_loader.py
 │   │   ├── connection_loader.py
 │   │   ├── log_setup.py
 │   │   ├── snowflake_session.py
-│   │   └── validators/
-│   │       ├── __init__.py
-│   │       └── environment_validator.py
-│   └── log_utils.py
-├── tests/
+│   │   ├── validators
+│   ├── validate
+│   │   ├── __init__.py
+│   │   ├── quality_checks.py
+│   ├── writeback
+│   │   ├── stage_writer.py
+├── snow_pipeline_pkg.egg-info
+│   ├── dependency_links.txt
+│   ├── top_level.txt
+├── tests
 │   ├── conftest.py
-│   └── validate/
-│       ├── test_column_overlap.py
-│       ├── test_connection_loader.py
-│       └── test_schema_matching.py
+│   ├── core
+│   │   ├── test_parse_args.py
+│   ├── validate
+│   │   ├── test_column_overlap.py
+│   │   ├── test_connection_loader.py
+│   │   ├── test_schema_matching.py
+├── tree.py
 ```
 ---
 
@@ -168,6 +177,7 @@ schema_registry = {
     "v1.0": StructType([...])
   }
 }
+
 ```
 
 ---
@@ -306,7 +316,8 @@ python snow_pipeline_pkg/pipeline_runner.py --verbose
 
 ## 🌱 Future Enhancements
 
-- YAML support for configs  
+- YAML support for configs 
+- Support additional source file types (beyond AVRO)
 - Multi-target orchestration  
 - DAG or task scheduler integration  
 - Schema diffing and audit mode  
