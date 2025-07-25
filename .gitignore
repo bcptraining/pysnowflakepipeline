@@ -3,3 +3,5 @@ __pycache__/
 *.egg-info/
 *.log
 htmlcov/
+dashboard/pipeline_run_history.json
+dashboard/pipeline_summary.json
