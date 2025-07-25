@@ -24,14 +24,17 @@ jobs:
       - name: Install dependencies      
         run: |
           python -m pip install --upgrade pip
-          pip install git+https://${{ secrets.GH_PAT }}@github.com/bcptraining/pysnowflakepipeline.git@b0e7b25606ce574574929c77840447d38f44baae#egg=snow_pipeline_pkg
           pip install -r requirements.txt
-
-      - name: Run tests
-        run: |
-          pytest --disable-warnings --maxfail=3
+      - name: Install package (editable)
+        run: pip install -e .
+               
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
       - name: Run coverage
         run: |
-          coverage run -m pytest
+          coverage run -m pytest --disable-warnings --maxfail=3
           coverage report
+          coverage xml
+      - name: Run flake8
+        run: flake8 snow_pipeline_pkg tests
