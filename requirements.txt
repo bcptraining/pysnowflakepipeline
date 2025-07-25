@@ -12,6 +12,6 @@ pycodestyle==2.14.0
 pyflakes==3.4.0
 Pygments==2.19.2
 pytest==8.4.1
--e git+https://github.com/bcptraining/pysnowflakepipeline.git@b0e7b25606ce574574929c77840447d38f44baae#egg=snow_pipeline_pkg
+snow_pipeline_pkg @ git+https://github.com/bcptraining/pysnowflakepipeline.git@<commit>
 vulture==2.14
 zstandard==0.23.0
