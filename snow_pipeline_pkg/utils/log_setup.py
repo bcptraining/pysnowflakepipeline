@@ -52,41 +52,53 @@ class SafeConsoleHandler(logging.StreamHandler):
 #         return None
 
 
+# def setup_logger(
+#     log_to_file=False, log_filename="pipeline.log", name=None, verbose=False
+# ):
+#     # import logging
+
+#     logger = logging.getLogger(name)
+#     logger.setLevel(logging.DEBUG if verbose else logging.INFO)
+
+#     formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+
+#     # Console handler
+#     ch = logging.StreamHandler()
+#     ch.setLevel(logging.DEBUG if verbose else logging.INFO)
+#     ch.setFormatter(formatter)
+#     logger.addHandler(ch)
+
+#     # Optional file handler
+#     if log_to_file:
+#         fh = logging.FileHandler(log_filename)
+#         fh.setLevel(logging.DEBUG if verbose else logging.INFO)
+#         fh.setFormatter(formatter)
+#         logger.addHandler(fh)
+
+
+#     return logger
 def setup_logger(
-    name: str = "pipeline_logger",
-    log_to_file: bool = False,
-    log_filename: str = "pipeline.log",
-    level=logging.INFO,
+    log_to_file=False, log_filename="pipeline.log", name=None, verbose=False
 ):
-    try:
-        logger = logging.getLogger(name)
-        logger.setLevel(level)
-        formatter = logging.Formatter(
-            "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-        )
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG if verbose else logging.INFO)
 
-        # Ensure console handler is attached (only once)
-        if not any(isinstance(h, SafeConsoleHandler) for h in logger.handlers):
-            console = SafeConsoleHandler(stream=sys.stdout)
-            console.setFormatter(formatter)
-            logger.addHandler(console)
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
-        # Ensure file handler is attached (only once)
-        if log_to_file and not any(
-            isinstance(h, logging.FileHandler) for h in logger.handlers
-        ):
-            log_dir = os.path.dirname(log_filename)
-            if log_dir and not os.path.exists(log_dir):
-                os.makedirs(log_dir, exist_ok=True)
-            file_handler = logging.FileHandler(log_filename, mode="a", encoding="utf-8")
-            file_handler.setFormatter(formatter)
-            logger.addHandler(file_handler)
+    # ✅ Console handler using SafeConsoleHandler
+    console = SafeConsoleHandler(stream=sys.stdout)
+    console.setLevel(logging.DEBUG if verbose else logging.INFO)
+    console.setFormatter(formatter)
+    logger.addHandler(console)
 
-        return logger
+    # 📁 Optional file handler (UTF-8 for emoji)
+    if log_to_file:
+        fh = logging.FileHandler(log_filename, encoding="utf-8")
+        fh.setLevel(logging.DEBUG if verbose else logging.INFO)
+        fh.setFormatter(formatter)
+        logger.addHandler(fh)
 
-    except Exception as e:
-        print(f"⚠️ Failed to initialize logger: {e}")
-        return None
+    return logger
 
 
 if __name__ == "__main__":

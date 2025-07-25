@@ -31,7 +31,10 @@ def test_perfect_schema_match(mock_df, mock_logger):
     missing, extras = validate_schema_matches_table(df, expected, mock_logger)
     assert missing == []
     assert extras == []
-    assert any("All schema columns matched" in msg for msg in mock_logger.messages)
+    assert any(
+        "All source columns match config target columns." in msg
+        for msg in mock_logger.messages
+    )
 
 
 def test_missing_columns(mock_df, mock_logger):

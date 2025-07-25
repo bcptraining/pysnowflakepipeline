@@ -3802,3 +3802,421 @@ Invalid argument [Provided job UUID not for a COPY job] for table function. Tabl
 2025-07-23 09:42:13,687 - AVRO_setup_logger - INFO - ✅ Pipeline execution completed successfully.
 2025-07-23 09:42:14,198 - AVRO_setup_logger - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
 2025-07-23 09:42:14,864 - AVRO_setup_logger - INFO - 🛑 Session 3517213143908358 closed and audit updated.
+2025-07-23 15:01:24,597 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143904266  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 15:01:25.283000-07:00 2999-01-01
+2025-07-23 15:01:27,022 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:01:27,022 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:18:32,540 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143847006  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 15:18:33.378000-07:00 2999-01-01
+2025-07-23 15:18:37,228 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:18:37,229 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:21:03,318 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143896094  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 15:21:04.241000-07:00 2999-01-01
+2025-07-23 15:21:05,389 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:21:05,389 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:24:04,454 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143879726  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 15:24:05.284000-07:00 2999-01-01
+2025-07-23 15:24:06,389 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:24:06,389 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:26:07,027 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143912454  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 15:26:07.933000-07:00 2999-01-01
+2025-07-23 15:26:08,758 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:26:08,758 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:33:49,053 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143847010  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 15:33:49.893000-07:00 2999-01-01
+2025-07-23 15:33:51,096 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:33:51,096 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:37:54,761 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143908362  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 15:37:55.629000-07:00 2999-01-01
+2025-07-23 15:37:56,959 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:37:56,960 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:44:26,134 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143912458  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 15:44:27.007000-07:00 2999-01-01
+2025-07-23 15:44:27,755 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:44:27,755 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:49:07,319 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143875618  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 15:49:08.193000-07:00 2999-01-01
+2025-07-23 15:49:08,961 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:49:08,962 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:55:42,960 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143916550  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 15:55:43.786000-07:00 2999-01-01
+2025-07-23 15:55:44,586 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 15:55:44,586 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:02:25,919 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143879730  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 16:02:26.606000-07:00 2999-01-01
+2025-07-23 16:02:27,625 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:02:27,636 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:03:30,673 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143847014  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 16:03:31.560000-07:00 2999-01-01
+2025-07-23 16:03:32,660 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:03:32,661 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:09:30,384 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143875622  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 16:09:31.284000-07:00 2999-01-01
+2025-07-23 16:09:32,395 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:09:32,396 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:12:56,802 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143847018  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 16:12:57.712000-07:00 2999-01-01
+2025-07-23 16:12:58,936 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:12:58,937 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:19:27,277 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143912462  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 16:19:28.197000-07:00 2999-01-01
+2025-07-23 16:19:29,032 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:19:29,032 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:21:54,021 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143916554  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 16:21:54.913000-07:00 2999-01-01
+2025-07-23 16:21:55,719 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:21:55,723 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:38:12,726 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143896098  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 16:38:13.556000-07:00 2999-01-01
+2025-07-23 16:38:14,872 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:38:14,872 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:43:05,861 - INFO - ✅ All required dependencies are installed.
+2025-07-23 16:43:05,862 - INFO - ✅ Pipeline started: 2025-07-23 16:43:05
+2025-07-23 16:43:05,862 - INFO - 📁 Connection config file determined to be: snow_pipeline_pkg/config/connection_details.json
+2025-07-23 16:43:05,912 - INFO - 🔗 Creating Snowpark session...
+2025-07-23 16:43:07,984 - INFO - 🧊 Session audit logged with:
+2025-07-23 16:43:08,176 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143916558  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-23 16:43:09.086000-07:00 2999-01-01
+2025-07-23 16:43:08,177 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-23 16:43:09,476 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-23 16:43:09,604 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-23 16:43:09,604 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-23 16:43:09,719 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-23 16:43:09,821 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:43:09,822 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-23 16:43:09,822 - INFO - ✅ All df columns match config target columns.
+2025-07-23 16:43:09,823 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-23 16:43:09,823 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-23 16:43:14,900 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde40f-0206-0d17-000c-7ee3000d7342
+2025-07-23 16:43:14,919 - INFO - 🔍 Query ID: 01bde40f-0206-0d17-000c-7ee3000d7342
+2025-07-23 16:43:15,741 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-23 16:43:15,741 - INFO - ⏱️ Pipeline completed in 9.88 seconds
+2025-07-23 16:43:16,152 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-23 16:43:16,152 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-23 16:43:16,152 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-23 16:43:16,152 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-23 16:43:16,658 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-23 16:43:17,153 - INFO - 🛑 Session 3517213143916558 closed and audit updated.
+2025-07-23 17:05:14,448 - INFO - Using config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 11:08:03,544 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 11:08:03,544 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 11:08:03,544 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 11:08:03,544 - INFO - ✅ All required dependencies are installed.
+2025-07-24 11:08:03,544 - INFO - ✅ Pipeline started: 2025-07-24 11:08:03
+2025-07-24 11:08:03,610 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 11:08:08,793 - INFO - 🧊 Session audit logged with:
+2025-07-24 11:08:08,979 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143924742  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 11:08:08.860000-07:00 2999-01-01
+2025-07-24 11:08:08,979 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 11:08:11,461 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 11:08:11,651 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 11:08:11,652 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 11:08:11,749 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 11:08:11,850 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 11:08:11,851 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 11:08:11,851 - INFO - ✅ All source columns match config target columns.
+2025-07-24 11:08:11,851 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 11:08:11,852 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 11:08:19,021 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde860-0206-1265-000c-7ee3000e4096
+2025-07-24 11:08:19,021 - INFO - 🔍 Query ID: 01bde860-0206-1265-000c-7ee3000e4096
+2025-07-24 11:08:19,931 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 11:08:19,931 - INFO - ⏱️ Pipeline completed in 16.39 seconds
+2025-07-24 11:08:20,709 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 11:08:20,709 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 11:08:20,709 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 11:08:20,713 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 11:08:21,412 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 11:08:22,088 - INFO - 🛑 Session 3517213143924742 closed and audit updated.
+2025-07-24 13:23:54,007 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 13:23:54,007 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 13:23:54,007 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 13:23:54,007 - INFO - ✅ All required dependencies are installed.
+2025-07-24 13:23:54,007 - INFO - ✅ Pipeline started: 2025-07-24 13:23:54
+2025-07-24 13:23:54,052 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 13:23:57,709 - INFO - 🧊 Session audit logged with:
+2025-07-24 13:23:57,984 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143932934  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 13:23:57.866000-07:00 2999-01-01
+2025-07-24 13:23:58,002 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 13:24:00,013 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 13:24:00,252 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 13:24:00,252 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 13:24:00,935 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 13:24:01,036 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 13:24:01,036 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 13:24:01,036 - INFO - ✅ All source columns match config target columns.
+2025-07-24 13:24:01,036 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 13:24:01,036 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 13:24:09,435 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde8e8-0206-1246-000c-7ee3000e30ba
+2025-07-24 13:24:09,436 - INFO - 🔍 Query ID: 01bde8e8-0206-1246-000c-7ee3000e30ba
+2025-07-24 13:24:10,505 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 13:24:10,505 - INFO - ⏱️ Pipeline completed in 16.5 seconds
+2025-07-24 13:24:11,307 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 13:24:11,307 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 13:24:11,309 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 13:24:11,309 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 13:24:11,962 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 13:24:11,962 - INFO - ✅ Pipeline summary saved successfully.
+2025-07-24 13:24:12,731 - INFO - 🛑 Session 3517213143932934 closed and audit updated.
+2025-07-24 13:25:17,970 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 13:25:17,971 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 13:25:17,971 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 13:25:17,971 - INFO - ✅ All required dependencies are installed.
+2025-07-24 13:25:17,971 - INFO - ✅ Pipeline started: 2025-07-24 13:25:17
+2025-07-24 13:25:18,025 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 13:25:20,197 - INFO - 🧊 Session audit logged with:
+2025-07-24 13:25:20,370 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143937030  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 13:25:20.312000-07:00 2999-01-01
+2025-07-24 13:25:20,370 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 13:25:21,776 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 13:25:21,987 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 13:25:21,988 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 13:25:22,141 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 13:25:22,240 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 13:25:22,240 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 13:25:22,240 - INFO - ✅ All source columns match config target columns.
+2025-07-24 13:25:22,240 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 13:25:22,240 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 13:25:27,978 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde8e9-0206-1261-000c-7ee3000ed0be
+2025-07-24 13:25:27,978 - INFO - 🔍 Query ID: 01bde8e9-0206-1261-000c-7ee3000ed0be
+2025-07-24 13:25:28,833 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 13:25:28,833 - INFO - ⏱️ Pipeline completed in 10.86 seconds
+2025-07-24 13:25:29,307 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 13:25:29,308 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 13:25:29,308 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 13:25:29,309 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 13:25:29,841 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 13:25:29,841 - INFO - ✅ Pipeline summary saved successfully.
+2025-07-24 13:25:30,262 - INFO - 🛑 Session 3517213143937030 closed and audit updated.
+2025-07-24 13:33:05,417 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 13:33:05,418 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 13:33:05,418 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 13:33:05,419 - INFO - ✅ All required dependencies are installed.
+2025-07-24 13:33:05,419 - INFO - ✅ Pipeline started: 2025-07-24 13:33:05
+2025-07-24 13:33:05,464 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 13:33:07,699 - INFO - 🧊 Session audit logged with:
+2025-07-24 13:33:07,829 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143937034  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 13:33:07.814000-07:00 2999-01-01
+2025-07-24 13:33:07,834 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 13:33:09,192 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 13:33:09,295 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 13:33:09,296 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 13:33:09,341 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 13:33:09,430 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 13:33:09,431 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 13:33:09,431 - INFO - ✅ All source columns match config target columns.
+2025-07-24 13:33:09,431 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 13:33:09,431 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 13:33:14,724 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde8f1-0206-1218-000c-7ee3000ea96a
+2025-07-24 13:33:14,724 - INFO - 🔍 Query ID: 01bde8f1-0206-1218-000c-7ee3000ea96a
+2025-07-24 13:33:15,787 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 13:33:15,787 - INFO - ⏱️ Pipeline completed in 10.37 seconds
+2025-07-24 13:33:16,393 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 13:33:16,394 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 13:33:16,395 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 13:33:16,395 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 13:33:16,888 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 13:33:16,888 - INFO - ✅ Pipeline summary saved successfully.
+2025-07-24 13:33:17,634 - INFO - 🛑 Session 3517213143937034 closed and audit updated.
+2025-07-24 14:12:18,238 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 14:12:18,239 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 14:12:18,239 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 14:12:18,239 - INFO - ✅ All required dependencies are installed.
+2025-07-24 14:12:18,239 - INFO - ✅ Pipeline started: 2025-07-24 14:12:18
+2025-07-24 14:12:18,322 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 14:12:22,378 - INFO - 🧊 Session audit logged with:
+2025-07-24 14:12:22,819 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143937038  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 14:12:22.550000-07:00 2999-01-01
+2025-07-24 14:12:22,819 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 14:12:24,208 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 14:12:24,374 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 14:12:24,375 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 14:12:24,580 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 14:12:24,790 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 14:12:24,792 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 14:12:24,792 - INFO - ✅ All source columns match config target columns.
+2025-07-24 14:12:24,792 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 14:12:24,794 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 14:12:31,750 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde918-0206-115f-000c-7ee3000e12e2
+2025-07-24 14:12:31,750 - INFO - 🔍 Query ID: 01bde918-0206-115f-000c-7ee3000e12e2
+2025-07-24 14:12:32,619 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 14:12:32,619 - INFO - ⏱️ Pipeline completed in 14.38 seconds
+2025-07-24 14:12:33,320 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 14:12:33,321 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 14:12:33,321 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 14:12:33,322 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 14:12:33,860 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 14:12:33,860 - INFO - ✅ Pipeline summary saved successfully.
+2025-07-24 14:12:34,611 - INFO - 🛑 Session 3517213143937038 closed and audit updated.
+2025-07-24 15:07:31,437 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 15:07:31,439 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 15:07:31,439 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 15:07:31,439 - INFO - ✅ All required dependencies are installed.
+2025-07-24 15:07:31,439 - INFO - ✅ Pipeline started: 2025-07-24 15:07:31
+2025-07-24 15:07:31,493 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 15:07:35,405 - INFO - 🧊 Session audit logged with:
+2025-07-24 15:07:35,807 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143920650  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 15:07:35.549000-07:00 2999-01-01
+2025-07-24 15:07:35,808 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 15:07:38,164 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 15:07:38,680 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:07:38,680 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:07:38,989 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:07:39,086 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 15:07:39,086 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 15:07:39,086 - INFO - ✅ All source columns match config target columns.
+2025-07-24 15:07:39,086 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 15:07:39,086 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 15:07:45,450 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde94f-0206-1261-000c-7ee3000ed0ee
+2025-07-24 15:07:45,452 - INFO - 🔍 Query ID: 01bde94f-0206-1261-000c-7ee3000ed0ee
+2025-07-24 15:07:47,505 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 15:07:47,505 - INFO - ⏱️ Pipeline completed in 16.07 seconds
+2025-07-24 15:07:48,134 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 15:07:48,137 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 15:07:48,137 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 15:07:48,138 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 15:07:48,621 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 15:07:48,621 - INFO - ✅ Pipeline summary saved successfully.
+2025-07-24 15:07:49,123 - INFO - 🛑 Session 3517213143920650 closed and audit updated.
+2025-07-24 15:34:16,087 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 15:34:16,088 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 15:34:16,088 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 15:34:16,088 - INFO - ✅ All required dependencies are installed.
+2025-07-24 15:34:16,089 - INFO - ✅ Pipeline started: 2025-07-24 15:34:16
+2025-07-24 15:34:16,089 - INFO - 🔗 Connecting to Snowflake with config: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 15:34:16,144 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 15:34:19,612 - INFO - 🧊 Session audit logged with:
+2025-07-24 15:34:19,885 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143941126  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 15:34:19.766000-07:00 2999-01-01
+2025-07-24 15:34:19,885 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 15:34:21,805 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 15:34:21,958 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:34:21,958 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:34:22,061 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:34:22,168 - INFO - Conformed and renamed (mapped) source columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 15:34:22,168 - INFO - Target columns: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL']
+2025-07-24 15:34:22,168 - INFO - ✅ All source columns match config target columns.
+2025-07-24 15:34:22,168 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 15:34:22,168 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 15:34:27,597 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde96a-0206-1261-000c-7ee3000ed10e
+2025-07-24 15:34:27,597 - INFO - 🔍 Query ID: 01bde96a-0206-1261-000c-7ee3000ed10e
+2025-07-24 15:34:28,867 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 15:34:28,867 - INFO - ⏱️ Pipeline completed in 12.78 seconds
+2025-07-24 15:34:29,573 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 15:34:29,574 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 15:34:29,575 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 15:34:29,575 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 15:34:29,862 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 15:34:29,862 - INFO - ✅ Pipeline summary saved successfully.
+2025-07-24 15:34:30,605 - INFO - 🛑 Session 3517213143941126 closed and audit updated.
+2025-07-24 15:46:13,490 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 15:46:13,491 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 15:46:13,491 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 15:46:13,491 - INFO - ✅ All required dependencies are installed.
+2025-07-24 15:46:13,491 - INFO - ✅ Pipeline started: 2025-07-24 15:46:13
+2025-07-24 15:46:13,492 - INFO - 🔗 Connecting to Snowflake with config: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 15:46:13,537 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 15:46:16,926 - INFO - 🧊 Session audit logged with:
+2025-07-24 15:46:17,255 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143928842  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 15:46:17.105000-07:00 2999-01-01
+2025-07-24 15:46:17,256 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 15:46:19,179 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 15:46:19,329 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:46:19,330 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:46:19,424 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:46:19,484 - INFO - ✅ All source columns match config target columns.
+2025-07-24 15:46:19,484 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 15:46:19,485 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 15:46:25,527 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde976-0206-1271-000c-7ee3000f00fa
+2025-07-24 15:46:25,527 - INFO - 🔍 Query ID: 01bde976-0206-1271-000c-7ee3000f00fa
+2025-07-24 15:46:26,537 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 15:46:26,537 - INFO - ⏱️ Pipeline completed in 13.04 seconds
+2025-07-24 15:46:27,101 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 15:46:27,109 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 15:46:27,109 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 15:46:27,109 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 15:46:27,587 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 15:46:28,130 - INFO - 🛑 Session 3517213143928842 closed and audit updated.
+2025-07-24 15:57:10,269 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 15:57:10,269 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 15:57:10,269 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 15:57:10,269 - INFO - ✅ All required dependencies are installed.
+2025-07-24 15:57:10,269 - INFO - ✅ Pipeline started: 2025-07-24 15:57:10
+2025-07-24 15:57:10,269 - INFO - 🔗 Connecting to Snowflake with config: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 15:57:10,320 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 15:57:12,906 - INFO - 🧊 Session audit logged with:
+2025-07-24 15:57:13,035 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143941130  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 15:57:13.066000-07:00 2999-01-01
+2025-07-24 15:57:13,035 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 15:57:14,783 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 15:57:14,899 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:57:14,899 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:57:14,993 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 15:57:15,094 - INFO - ✅ All source columns match config target columns.
+2025-07-24 15:57:15,094 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 15:57:15,094 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 15:57:19,990 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde981-0206-1271-000c-7ee3000f010e
+2025-07-24 15:57:19,990 - INFO - 🔍 Query ID: 01bde981-0206-1271-000c-7ee3000f010e
+2025-07-24 15:57:20,824 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 15:57:20,824 - INFO - ⏱️ Pipeline completed in 10.55 seconds
+2025-07-24 15:57:21,815 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 15:57:21,816 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 15:57:21,816 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 15:57:21,816 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 15:57:22,383 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 15:57:23,282 - INFO - 🛑 Session 3517213143941130 closed and audit updated.
+2025-07-24 16:04:57,753 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 16:04:57,754 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 16:04:57,754 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 16:04:57,754 - INFO - ✅ All required dependencies are installed.
+2025-07-24 16:04:57,754 - INFO - ✅ Pipeline started: 2025-07-24 16:04:57
+2025-07-24 16:04:57,755 - INFO - 🔗 Connecting to Snowflake with config: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 16:04:57,784 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 16:05:00,151 - INFO - 🧊 Session audit logged with:
+2025-07-24 16:05:00,481 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143928846  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 16:05:00.317000-07:00 2999-01-01
+2025-07-24 16:05:00,481 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 16:05:01,791 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 16:05:02,002 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 16:05:02,003 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 16:05:02,102 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 16:05:02,205 - INFO - ✅ All source columns match config target columns.
+2025-07-24 16:05:02,206 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 16:05:02,207 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 16:05:07,018 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde989-0206-1265-000c-7ee3000e4146
+2025-07-24 16:05:07,019 - INFO - 🔍 Query ID: 01bde989-0206-1265-000c-7ee3000e4146
+2025-07-24 16:05:07,953 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 16:05:07,953 - INFO - ⏱️ Pipeline completed in 10.2 seconds
+2025-07-24 16:05:08,382 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 16:05:08,383 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 16:05:08,384 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 16:05:08,384 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 16:05:08,785 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 16:05:09,307 - INFO - 🛑 Session 3517213143928846 closed and audit updated.
+2025-07-24 16:08:09,719 - INFO - ✅ Log initialized with log_file: logs/pipeline.log
+2025-07-24 16:08:09,719 - INFO - ✅ Using copy config file: snow_pipeline_pkg/config/copy_to_snowstg_avro_emp_details_avro_cls.json
+2025-07-24 16:08:09,719 - INFO - ✅ Using connection config file: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 16:08:09,719 - INFO - ✅ All required dependencies are installed.
+2025-07-24 16:08:09,722 - INFO - ✅ Pipeline started: 2025-07-24 16:08:09
+2025-07-24 16:08:09,722 - INFO - 🔗 Connecting to Snowflake with config: snow_pipeline_pkg/config/connection_details.json
+2025-07-24 16:08:09,780 - INFO - 🔗 Creating Snowpark session...
+2025-07-24 16:08:11,754 - INFO - 🧊 Session audit logged with:
+2025-07-24 16:08:11,876 - INFO -          SESSION_ID USER_NAME   WAREHOUSE    ROLE                       CREATED_AT  CLOSED_AT
+0  3517213143945222  SNOWPARK  COMPUTE_WH  PUBLIC 2025-07-24 16:08:11.917000-07:00 2999-01-01
+2025-07-24 16:08:11,876 - INFO - 📥 Reading Avro data from: @my_s3_stage/Avro_folder/userdata1.avro
+2025-07-24 16:08:13,590 - INFO - 🔍 Avro file loaded with columns: ['"registration_dttm"', '"id"', '"first_name"', '"last_name"', '"email"', '"gender"', '"ip_address"', '"cc"', '"country"', '"birthdate"', '"salary"', '"title"', '"comments"']
+2025-07-24 16:08:13,746 - INFO - 🧼 Normalized columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 16:08:13,747 - INFO - 🔍 Loaded Avro data from @my_s3_stage/Avro_folder/userdata1.avro with columns: ['REGISTRATION_DTTM', 'ID', 'FIRST_NAME', 'LAST_NAME', 'EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 16:08:13,839 - INFO - 🔄 Renamed columns based on mapping: ['REGISTRATION', 'USER_ID', 'FIRST_NAME', 'LAST_NAME', 'USER_EMAIL', 'GENDER', 'IP_ADDRESS', 'CC', 'COUNTRY', 'BIRTHDATE', 'SALARY', 'TITLE', 'COMMENTS']
+2025-07-24 16:08:13,949 - INFO - ✅ All source columns match config target columns.
+2025-07-24 16:08:13,958 - INFO - 🔍 Validating target columns against schema reference 'emp_details_avro_cls@v1.0' with available versions: ['v1.0']
+2025-07-24 16:08:13,958 - INFO - ✅ Config target columns match schema reference 'emp_details_avro_cls@v1.0' exactly.
+2025-07-24 16:08:19,317 - INFO - ✅ COPY INTO DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS succeeded after 1 attempt(s). Query ID: 01bde98c-0206-1218-000c-7ee3000ea9fe
+2025-07-24 16:08:19,317 - INFO - 🔍 Query ID: 01bde98c-0206-1218-000c-7ee3000ea9fe
+2025-07-24 16:08:20,136 - INFO - ✅ Rejects written to table: EMPLOYEE_AVRO_REJECTS
+2025-07-24 16:08:20,136 - INFO - ⏱️ Pipeline completed in 10.41 seconds
+2025-07-24 16:08:20,657 - INFO - 📂 1 files loaded to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 16:08:20,657 - INFO - ✅ 1000 rows added to DEMO_DB.PUBLIC.EMP_DETAILS_AVRO_CLS
+2025-07-24 16:08:20,657 - WARNING - 🚫 0 rows sent to DEMO_DB.PUBLIC.EMPLOYEE_AVRO_REJECTS
+2025-07-24 16:08:20,659 - INFO - ✅ Pipeline execution completed successfully.
+2025-07-24 16:08:21,035 - INFO - 📊 Summary written to: dashboard\pipeline_summary.json
+2025-07-24 16:08:21,477 - INFO - 🛑 Session 3517213143945222 closed and audit updated.
