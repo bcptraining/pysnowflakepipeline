@@ -1,13 +1,3 @@
-# import modin.pandas as pd
-
-# doc = pd.__doc__
-# if doc:
-#     print("🔍 Pandas backend docstring:", doc.splitlines()[0])
-# else:
-#     print("✅ Modin is active! Docstring not set, but import succeeded.")
-#     print("📦 Modin file loaded from:", pd.__file__)
-
-
 import time
 import sys
 import os
