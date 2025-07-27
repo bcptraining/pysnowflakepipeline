@@ -225,7 +225,9 @@ def main(config_path_override=None):
 
             # ---------- 13. Include reject sample in summary ----------
             try:
-                sample = rejects_df.limit(5).to_pandas().to_dict(orient="records")
+                sample = (
+                    rejects_df.limit(5).to_snowpark_pandas().to_dict(orient="records")
+                )
             except Exception as e:
                 log.warning(f"⚠️ Could not extract reject sample: {e}")
                 sample = ["Reject sample unavailable"]

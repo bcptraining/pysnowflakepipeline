@@ -1,7 +1,7 @@
 import streamlit as st
 import json
 import os
-import pandas as pd
+import modin.pandas as pd
 
 st.set_page_config(page_title="Pipeline Dashboard", layout="wide")
 st.title("🛠️ Pipeline Dashboard")
