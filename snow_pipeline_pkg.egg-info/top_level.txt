@@ -1,1 +1,5 @@
+dashboard
+htmlcov
+logs
 snow_pipeline_pkg
+tests

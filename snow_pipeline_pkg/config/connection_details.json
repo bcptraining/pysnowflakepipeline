@@ -7,5 +7,5 @@
     "warehouse": "COMPUTE_WH",
     "database": "DEMO_DB",
     "schema": "PUBLIC",
-    "private_key_path": "snow_pipeline_pkg/config/snowflake_private_key.p8"
+    "private_key_path": "snowflake_private_key.p8"
 }
