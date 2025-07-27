@@ -138,7 +138,7 @@ def snowconnection(connection_config, log):
     session_details.write.mode("append").save_as_table("SESSION_AUDIT")
     log.info("🧊 Session audit logged with:")
     try:
-        log.info(session_details.to_pandas().to_string())
+        log.info(session_details.to_snowpark_pandas().to_string())
     except Exception as e:
         log.warning(
             f"⚠️ Could not convert session details to pandas DataFrame so session audit was skipped: {e}"

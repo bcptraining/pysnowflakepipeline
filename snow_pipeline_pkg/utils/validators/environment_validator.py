@@ -15,7 +15,11 @@ def check_dependencies(dependencies=None, log=None):
 
     log = log or logging.getLogger(__name__)
     if dependencies is None:
-        dependencies = ["pandas", "snowflake.connector", "snowflake.snowpark"]
+        dependencies = [
+            "snowflake.snowpark.modin",
+            "snowflake.connector",
+            "snowflake.snowpark",
+        ]
 
     missing = []
     for dep in dependencies:
