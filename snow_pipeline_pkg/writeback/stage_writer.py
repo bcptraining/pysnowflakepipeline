@@ -124,14 +124,16 @@ def copy_to_table_semi_struct_data(session, config_file, df, schema="NA", log=No
             )
             copied = True
             qid = session.sql("SELECT LAST_QUERY_ID()").collect()[0][0]
+            break  # Success, exit retry loop
         except Exception as e:
-            attempt += 1
             log.warning(f"⚠️ COPY INTO failed attempt {attempt} of {max_retries}: {e}")
-            time.sleep(2**attempt)
 
-        if attempt == max_retries:
-            log.error("❌ Max retries reached. Aborting copy operation.")
-            raise ValueError("Max retries reached. Aborting copy operation.") from e
+            if attempt < max_retries:
+                time.sleep(2**attempt)
+                attempt += 1
+            else:
+                log.error("❌ Max retries reached. Aborting copy operation.")
+                raise ValueError("Max retries reached. Aborting copy operation.") from e
 
     # (7) Final status and return copy result
     if qid is None and log:

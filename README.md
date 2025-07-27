@@ -1,27 +1,28 @@
 # ❄️ SnowPipeline Project
 
-A modular, schema-aware ingestion pipeline built for Snowflake that loads Avro-formatted user data into a target table with column normalization, validation, audit logging, and structured reject tracking.
+A modular, schema-aware ingestion pipeline built with **Python Snowpark** for Snowflake.  
+It ingests Avro-formatted user data, applies validation and column normalization, and writes audit-traceable outputs with structured reject tracking and observability throughout.
+
+---
+
+## ⚡ At a Glance
+
+- ❄️ **Snowflake-Native Pipeline** — Python-based ingestion tailored for Snowflake’s architecture  
+- 🧬 **Schema-Aware Avro Handling** — Validates and aligns data against registry-based configs  
+- 🏗️ **Modular + Audit-Ready Design** — Clear separation of ingestion, transformation, validation, and writeback layers  
+- 🖥️ **CLI Execution** — Configurable via command-line args or environment variables  
+- 📈 **Observability Built-In** — Session tracking, structured logging, reject collection, and dashboard summary outputs
 
 ---
 
 ## 🎯 Purpose
 
-This project was designed as a hands-on learning exercise to complement my existing experience with native Snowflake tools—such as Snowpipe, streams and tasks, and dynamic tables—by building a modular ingestion pipeline using Python and Snowpark.
+This project was designed as a hands-on learning exercise to complement my existing experience with native Snowflake tools—such as Snowpipe, streams and tasks, and dynamic tables—by building a custom ingestion framework using Python and Snowpark.
 
-Rather than replicating Snowflake’s managed flows, my goal was to explore the architecture, orchestration, validation patterns, and **observability principles** behind a custom-built ingestion framework:
+Rather than replicating Snowflake’s managed flows, my goal was to explore the architecture, orchestration, validation patterns, and **observability principles** behind a modular pipeline that feels production-ready.
 
-- 🔧 **Modular Python Design** — Structured with clear separation across ingestion, transformation, validation, and writeback layers.
-- 📦 **Pyproject-Based Packaging** — Built as a Python package with dependency management, entry points, and clean directory layout.
-- 🧬 **Schema Registry Integration** — Implements a versioned registry for config and schema alignment.
-- 🧪 **Layered Validation Logic** — Ensures audit-grade reliability through multiple column checks.
-- 🧊 **Snowflake Session Auditing** — Context-managed sessions log usage metadata to `SESSION_AUDIT`.
-- 📈 **Observability Features** — Structured logging, reject tracking, and summary outputs for full pipeline visibility.
-- 🖥️ **CLI-Compatible Config Loading** — Pipeline runner supports configuration overrides via command-line arguments or environment variables.
+*Designed to showcase Python engineering skills, Snowflake platform fluency, and architectural awareness in building extensible, observable data pipelines.*
 
-> ⚠️ **Note on Transformations**  
-> Transformations are intentionally minimal—limited to column projection and renaming—since the use case focused on staging conformed data for downstream consumption. This keeps the pipeline focused, auditable, and extensible without unnecessary complexity.
-
-This project showcases Python engineering skills, Snowflake platform fluency, and architectural awareness when designing extensible, observable data pipelines.  
 
 ## 🏗️ Infrastructure Setup
 
@@ -77,51 +78,78 @@ This script creates:
 ```
 snow_pipelineproject/
 ├── README.md
+├── __init__.py
+├── dashboard
+│   ├── dashboard.py
+│   ├── pipeline_run_history.json
+│   ├── pipeline_summary.json
+├── environment.yml
+├── logs
+│   ├── pipeline.log
+│   ├── pipeline_v3.log
+├── project_structure.txt
 ├── pyproject.toml
 ├── requirements.txt
 ├── setup.py
-├── project_structure.txt
-├── logs/
-│   └── pipeline.log
-├── dashboard/
-│   └── pipeline_summary.json
-├── snow_pipeline_pkg/
-│   ├── pipeline_runner.py
-│   ├── config/
-│   │   ├── __init__.py
+├── setup_snowflake_resources.sql
+├── snow_pipeline_pkg
+│   ├── __init__.py
+│   ├── __main__.py
+│   ├── config
 │   │   ├── connection_details.json
 │   │   ├── copy_to_snowstg_avro_emp_details_avro_cls.json
 │   │   ├── schemas.py
-│   │   └── snowflake_private_key.p8
-│   ├── ingest/
+│   │   ├── snowflake_private_key.p8
+│   ├── ingest
 │   │   ├── __init__.py
-│   │   └── avro_loader.py
-│   ├── transform/
+│   │   ├── avro_loader.py
+│   ├── pipeline_runner.py
+│   ├── transform
 │   │   ├── __init__.py
-│   │   └── schema_mapper.py
-│   ├── validate/
-│   │   ├── __init__.py
-│   │   └── quality_checks.py
-│   ├── writeback/
-│   │   ├── __init__.py
-│   │   └── stage_writer.py
-│   ├── utils/
+│   │   ├── schema_mapper.py
+│   ├── utils
 │   │   ├── __init__.py
 │   │   ├── config_loader.py
 │   │   ├── connection_loader.py
 │   │   ├── log_setup.py
 │   │   ├── snowflake_session.py
-│   │   └── validators/
-│   │       ├── __init__.py
-│   │       └── environment_validator.py
-│   └── log_utils.py
-├── tests/
+│   │   ├── validators
+│   ├── validate
+│   │   ├── __init__.py
+│   │   ├── quality_checks.py
+│   ├── writeback
+│   │   ├── stage_writer.py
+├── snow_pipeline_pkg.egg-info
+│   ├── dependency_links.txt
+│   ├── top_level.txt
+├── tests
 │   ├── conftest.py
-│   └── validate/
-│       ├── test_column_overlap.py
-│       ├── test_connection_loader.py
-│       └── test_schema_matching.py
+│   ├── core
+│   │   ├── test_parse_args.py
+│   ├── validate
+│   │   ├── test_column_overlap.py
+│   │   ├── test_connection_loader.py
+│   │   ├── test_schema_matching.py
+├── tree.py
 ```
+## 🚀 Setup Instructions
+
+To get started with the SnowPipeline project, follow these steps:
+
+```bash
+# Clone the repository
+git clone https://github.com/bcptraining/pysnowflakepipeline.git
+cd pysnowflakepipeline
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Create required Snowflake infrastructure
+snowsql -f setup_snowflake_resources.sql
+
+# Run the pipeline with default configuration
+python snow_pipeline_pkg/pipeline_runner.py
+
 ---
 
 ## ⚙️ Pipeline Configuration
@@ -168,6 +196,7 @@ schema_registry = {
     "v1.0": StructType([...])
   }
 }
+
 ```
 
 ---
@@ -306,7 +335,8 @@ python snow_pipeline_pkg/pipeline_runner.py --verbose
 
 ## 🌱 Future Enhancements
 
-- YAML support for configs  
+- YAML support for configs 
+- Support additional source file types (beyond AVRO)
 - Multi-target orchestration  
 - DAG or task scheduler integration  
 - Schema diffing and audit mode  
