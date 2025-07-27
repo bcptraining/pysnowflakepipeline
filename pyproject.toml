@@ -42,8 +42,9 @@ exclude = '''
 testpaths = ["tests"]
 addopts = "--disable-warnings"
 
-[tool.setuptools]
-packages = ["snow_pipeline_pkg"]
+[tool.setuptools.packages.find]
+where = ["."]
+
 
 [tool.coverage.run]
 branch = true
