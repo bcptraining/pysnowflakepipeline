@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         "snowflake-snowpark-python",
-        "modin[ray]",
+        "modin[ray]==0.30.1",
     ],
     author="Cory Purkis",
     description="Reusable Avro-to-Snowflake staging pipeline",

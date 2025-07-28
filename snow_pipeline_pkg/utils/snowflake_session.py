@@ -52,6 +52,9 @@ def managed_snowflake_session(config_path=None, log=None):
         config_path = os.getenv("SNOWFLAKE_CONFIG", "./config/connection_details.json")
     config = load_connection_config(config_path)
     session = snowconnection(config, log)
+    if session is None:
+        log.error("🚫 Snowpark session was not created. Aborting.")
+        raise RuntimeError("Snowpark session is None.")
     try:
         yield session
     finally:
@@ -138,11 +141,13 @@ def snowconnection(connection_config, log):
     session_details.write.mode("append").save_as_table("SESSION_AUDIT")
     log.info("🧊 Session audit logged with:")
     try:
-        log.info(session_details.to_snowpark_pandas().to_string())
+        # Safer fallback logging for Snowpark-compatible preview
+        log.info("🧊 Session details preview:")
+        log.info(session_details.limit(5).collect())
+
     except Exception as e:
-        log.warning(
-            f"⚠️ Could not convert session details to pandas DataFrame so session audit was skipped: {e}"
-        )
+        log.warning(f"⚠️ Failed to log session preview: {e}")
+
     return session
 
 
